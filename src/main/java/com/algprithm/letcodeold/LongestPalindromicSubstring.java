@@ -1,11 +1,11 @@
-package com.algprithm.letcode;
+package com.algprithm.letcodeold;
 
 import javax.management.DescriptorKey;
 
 /**
  * @author zhailzh
  * 
- * @Date 2015Äê11ÔÂ16ÈÕ¡ª¡ªÏÂÎç2:17:16 ×î³¤µÄ»ØÎÄ´®
+ * @Date 201511162:17:16 î³¤Ä»Ä´
  * 
  */
 public class LongestPalindromicSubstring {
@@ -16,7 +16,7 @@ public class LongestPalindromicSubstring {
 		System.out.println(lo.longestPalindrome(value));
 	}
 	
-	//¶¯Ì¬¹æ»®£¬Ê²Ã´Ê±¼äÊ¹ÓÃ¶¯Ì¬¹æ»®£¬Õâ¸öÊÇ×Ô¼ºÀí½âµÄÒ»¸öÃ¤µã
+	//Ì¬æ»®Ê²Ã´Ê±Ê¹Ã¶Ì¬æ»®Ô¼Ò»Ã¤
 	//
 	public String longestPalindrome(String s) {
 		  int n = s.length();
@@ -37,7 +37,7 @@ public class LongestPalindromicSubstring {
 		  return res;
 		}
 
-	//±©Á¦ÆÆ½â,Ö±½ÓµÄ³¬Ê±
+	//Æ½,Ö±ÓµÄ³Ê±
 	@Deprecated
 	public String longestPalindrome_isWrong(String s) {
 		int temp = 0;int tempi = 0; int tempj = 0;

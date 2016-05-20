@@ -3,8 +3,8 @@ package com.algorithm.sort;
 import java.util.Arrays;
 
 /**
- * 特性：unstable sort、In-place sort。 最优时间：O(nlgn) 最差时间：O(nlgn)
- * 思想：运用了最小堆、最大堆这个数据结构，而堆还能用于构建优先队列。
+ * 裕unstable sortIn-place sort 时洌篛(nlgn) 时洌篛(nlgn)
+ * 思耄盒⊙≥结构鸦诠榷小
  */
 public class HeapSort {
 
@@ -31,9 +31,9 @@ public class HeapSort {
     return arrays;
   }
 
-  // 保持堆的性质
+  // 侄训
   private static void mainHeap(int[] arrays, int i, int length) {
-    // 左子树
+    // 
     int largest = i;
     if (left(i) < length && arrays[left(i)] > arrays[largest]) {
       largest = left(i);

@@ -1,11 +1,11 @@
-package com.algprithm.letcode;
+package com.algprithm.letcodeold;
 
 /**
  * @author zhailzh
  * 
- * @Date 2015年11月13日——下午2:41:50
+ * @Date 201511132:41:50
  * 
- * Tags：LinkedList,level1
+ * TagsLinkedList,level1
  * 
  */
 public class AddTwoNumbers {

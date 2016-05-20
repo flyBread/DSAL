@@ -5,34 +5,34 @@ import com.data.Heap;
 import com.data.createData.DataFromFile;
 
 /**
- * @author zhailzh ĞèÕÒ×îĞ¡µÄK¸öÔªËØ
+ * @author zhailzh Ğ¡KÔª
  */
 public class Al05FindMinK {
 
   public static void main(String[] args) {
     int[] arrays = DataFromFile.readIntData(0, 100);
-    // µÚÒ»ÖÖ·½·¨£¬Ê×ÏÈÀûÓÃ¿ìÅÅÅÅºÃĞòÁĞ£¬È»ºóµ÷³öÇ°ÃæµÄk¸ö×îĞ¡µÄ£¬Ğ§ÂÊÊÇ£ºO£¨n*logn+k£©=O£¨n*logn£©¡£
+    // Ò»Ö·Ã¿ÅºĞ£È»Ç°kĞ¡Ä£Ğ§Ç£On*logn+k=On*logn
     QuickSort.quickSort(arrays);
     int k = 4;
     for (int i = 0; i < k; i++) {
       System.out.print(arrays[i] + " ");
     }
 
-    // µÚ¶şÖÖ£¬Î¬»¤Ò»¸ökµÄÊı¾İ,È»ºó±éÀún¸öÊı¾İ£¬±£³Ök¸öÊı¾İµÄË³Ğò
-    // Ğ§ÂÊ¾ÍÊÇ£ºÕûÌËÏÂÀ´£¬×ÜµÄÊ±¼ä¸´ÔÓ¶ÈÆ½¾ùÏÂÀ´Îª£ºn*O£¨k£©=O£¨n*k£©
+    // Ú¶Ö£Î¬Ò»k,È»nİ£kİµË³
+    // Ğ§Ê¾Ç£ÜµÊ±ä¸´Ó¶Æ½Îªn*Ok=On*k
     // int[] mink = findMink1(arrays, k);
     // for (int i = 0; i < k; i++) {
     // System.out.print(mink[i] + " ");
     // }
 
-    // µÚÈıÖÖ£¬Èç¹ûk±È½Ï´óµÄ»°£¬ÎÒÃÇ¿ÉÒÔ¶ÔkµÄÊı¾İ½á¹¹½øĞĞÓÅ»¯£¬ÀûÓÃĞ¡¶¥¶ÑµÄÌØµã
-    // Ğ§ÂÊ¾ÍÊÇ£º×Ü·ÑÊ±O£¨k+£¨n-k£©*logk£©=O£¨n*logk£©
+    // Ö£kÈ½Ï´Ä»Ç¿Ô¶kİ½á¹¹Å»Ğ¡ÑµØµ
+    // Ğ§Ê¾Ç£Ü·Ê±Ok+n-k*logk=On*logk
     int[] mingheap = findMink2(arrays, 4);
     Heap.printMAXHeapByOrder(mingheap);
   }
 
   public static int[] findMink2(int[] arrays, int k) {
-    // ³õÊ¼»¯
+    // Ê¼
     int[] mingheap = new int[k];
     for (int i = 0; i < k; i++) {
       mingheap[i] = arrays[i];
@@ -42,7 +42,7 @@ public class Al05FindMinK {
 
     for (int i = k; i < arrays.length; i++) {
       int temp = arrays[i];
-      // ±éÀúÃ¿Ò»¸öÖµ£¬Î¬»¤´ó¶¥¶Ñ
+      // Ã¿Ò»ÖµÎ¬ó¶¥¶
       sortHead(temp, mingheap);
     }
     return mingheap;
@@ -50,7 +50,7 @@ public class Al05FindMinK {
 
   private static void sortHead(int temp, int[] mingheap) {
 
-    // ±È×î´óµÄÖµ»¹Òª´ó£¬Ö±½ÓµÄ·µ»Ø
+    // ÖµÒªÖ±ÓµÄ·
     if (temp >= mingheap[0]) {
       return;
     } else {
@@ -61,13 +61,13 @@ public class Al05FindMinK {
   }
 
   public static int[] findMink1(int[] arrays, int k) {
-    // ³õÊ¼»¯
+    // Ê¼
     int[] mink = new int[k];
     for (int i = 0; i < k; i++) {
       mink[i] = arrays[i];
     }
 
-    // ¸øÇ°k¸öÔªËØ½øĞĞÅÅĞò
+    // Ç°kÔªØ½
     QuickSort.quickSort(mink);
 
     for (int i = k; i < arrays.length; i++) {
@@ -77,21 +77,21 @@ public class Al05FindMinK {
   }
 
   /**
-   * value ºÍ minkÖĞµÄÔªËØ£¬½øĞĞ±È½Ï£¬È·¶¨valueÔÚminkÖĞµÄÎ»ÖÃ
+   * value  minkĞµÔªĞ±È½Ï£È·valueminkĞµÎ»
    */
   public static void sortk(int value, int[] mink) {
 
-    // ÌØÊâµÄÇé¿ö,±È×î´óµÄ»¹Òª´ó£¬Ö±½ÓµÄ·µ»Ø
+    // ,Ä»ÒªÖ±ÓµÄ·
     if (value >= mink[mink.length - 1]) {
       return;
     }
 
-    // ±È×îĞ¡µÄ»¹ÒªĞ¡£¬Ö±½ÓµÄ¸³Öµ
+    // Ğ¡Ä»ÒªĞ¡Ö±ÓµÄ¸Öµ
     if (value < mink[0]) {
       mink[0] = value;
     }
 
-    // Î»ÖÃ´¦ÓÚminkµÄÖĞ¼äÖµ
+    // Î»Ã´minkĞ¼Öµ
 
     for (int i = mink.length - 1; i > 0; i--) {
       if (value < mink[i]) {

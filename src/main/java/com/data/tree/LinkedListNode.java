@@ -1,7 +1,7 @@
 package com.data.tree;
 
 /**
- * Á´±í
+ * 
  */
 public class LinkedListNode<E> {
 

@@ -5,11 +5,11 @@ import com.data.LinkedNode;
 /**
  * @author zhailzh
  * 
- * @Date 2015Äê11ÔÂ6ÈÕ¡ª¡ªÏÂÎç4:46:12
+ * @Date 20151164:46:12
  * 
- *       ÅĞ¶ÏÁ½¸öµ¥Á´±íÊÇ·ñÏà½»£¬ÓĞ»·£¬ÎŞ»·
+ *       Ğ¶Ç·à½»Ğ»Ş»
  * 
- *       Ïà½»£ºÅĞ¶Ï×îºóÒ»¸öÎ»ÖÃÊÇ·ñÏà½» µÚÒ»¸ö½Úµã£¬ÈËÎªµÄÔö¼ÓµÄ»· ÅĞ¶Ï»·µÄµÚÒ»¸ö½Úµã
+ *       à½»Ğ¶Ò»Î»Ç·à½» Ò»Úµã£¬ÎªÓµÄ» Ğ¶Ï»ÄµÒ»Úµ
  */
 public class LinkedListJoin {
 
@@ -17,7 +17,7 @@ public class LinkedListJoin {
 
   }
 
-  // ÅĞ¶Ï×îºóÒ»¸ö½Úµã
+  // Ğ¶Ò»Úµ
   public boolean isConNLoop(LinkedNode<?> h1, LinkedNode<?> h2) {
     if (h1 == null || h2 == null)
       return false;
@@ -33,7 +33,7 @@ public class LinkedListJoin {
     return false;
   }
 
-  // ÕÒµ½Á½¸ö½ÚµãÏà½»µÄµØ·½
+  // ÒµÚµà½»ÄµØ·
   public LinkedNode<?> findPointNLoop(LinkedNode<?> h1, LinkedNode<?> h2) {
     if (h1 == null || h2 == null)
       return null;
@@ -71,7 +71,7 @@ public class LinkedListJoin {
     return loopEntry(h2) != null;
   }
 
-  // ÅĞ¶ÏÊÇ·ñÓĞ»·
+  // Ğ¶Ç·Ğ»
   public LinkedNode<?> loopEntry(LinkedNode<?> head) {
     if (head == null)
       return null;

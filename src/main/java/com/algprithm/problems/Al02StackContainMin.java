@@ -1,7 +1,7 @@
 package com.algprithm.problems;
 
 /**
- * 设计包含min函数的栈。 定义栈的数据结构，要求添加一个min函数，能够得到栈的最小元素。 要求函数min、push以及pop的时间复杂度都是O(1)。
+ * 瓢min栈 栈萁峁挂籱in芄玫栈小元亍 要minpush约pop时涓从度禣(1)
  */
 public class Al02StackContainMin<E extends Comparable<E>> {
 
@@ -20,7 +20,7 @@ public class Al02StackContainMin<E extends Comparable<E>> {
 
   public void push(E e) {
     if (length >= elementData.length) {
-      throw new IllegalStateException("栈中的元素已满，并且没有自动增加的函数");
+      throw new IllegalStateException("栈械元没远拥暮");
     } else {
       length++;
       E min = matainmin(e);
@@ -36,9 +36,9 @@ public class Al02StackContainMin<E extends Comparable<E>> {
 
   public E pop() {
     if (length >= elementData.length) {
-      throw new IllegalStateException("栈中的元素已满，并且没有自动增加的函数");
+      throw new IllegalStateException("栈械元没远拥暮");
     } else if (length < 0) {
-      throw new IllegalStateException("栈中的元素已无，不能再pop");
+      throw new IllegalStateException("栈械元蓿pop");
     } else {
       @SuppressWarnings("unchecked")
       E result = (E) elementData[length];

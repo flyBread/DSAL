@@ -8,9 +8,9 @@ import java.util.List;
 /**
  * @author zhailzh
  * 
- * @Date 2015年10月30日——下午1:58:00
+ * @Date 201510301:58:00
  * 
- *       二叉排序树
+ *       
  */
 public class BinarySortTree<E extends Comparable<?>> {
 

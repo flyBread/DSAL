@@ -3,7 +3,7 @@ package com.algprithm.problems;
 import java.util.Stack;
 
 /**
- * @author zhailzh 判断表达式是不是合乎规则'{','[','(',')',']','}'
+ * @author zhailzh 卸媳式遣呛虾'{','[','(',')',']','}'
  */
 public class Al06PiPei {
 
@@ -27,7 +27,7 @@ public class Al06PiPei {
     return true;
   }
 
-  // 数字或者是字母
+  // 只母
   private boolean isNumber(char temp) {
     return Character.isLetter(temp);
   }
@@ -41,6 +41,6 @@ public class Al06PiPei {
     Al06PiPei piper = new Al06PiPei();
     String test = "e+{r*c+[d*(a+b*c)+f]}+p";
     boolean res = piper.isPatternRight(test);
-    System.out.println(" pattern：  " + test + "  " + res);
+    System.out.println(" pattern  " + test + "  " + res);
   }
 }

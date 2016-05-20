@@ -1,22 +1,22 @@
-package com.algprithm.letcode;
+package com.algprithm.letcodeold;
 
 import java.util.Arrays;
 
 /**
  * @author zhailzh
  * 
- * @Date 2015年12月1日——下午2:28:11 字符串转换
+ * @Date 20151212:28:11 址转
  */
 public class ZigZagConversion {
 
 	public static String convert(String s, int numRows) {
 	    if(numRows<=1) return s;
 	    StringBuilder sb = new StringBuilder();
-	    //循环各个行
+	    //循
 	    int guilushu = 2*(numRows -1);
 	    
 	    for (int i = 0; i < numRows; i++) {
-			//从s中遍历出各个行的坐标
+			//s斜械
 	    	for (int j = i; j < s.length(); j++) {
 	    		if(j%guilushu  == i || j%guilushu == (guilushu - i)){
 	    			System.out.print(" "+j);
@@ -29,7 +29,7 @@ public class ZigZagConversion {
 	}
 	
 	/**
-	 * 通过空间进行换取速度
+	 * 通占谢取俣
 	 * */
 	public String convertbyKongJian(String s, int nRows) {
         if(nRows <= 1)

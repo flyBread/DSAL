@@ -5,7 +5,7 @@ import java.util.Stack;
 /**
  * @author zhailzh
  * 
- * @Date 2015Äê10ÔÂ26ÈÕ¡ª¡ªÏÂÎç1:55:20 Í¼µÄ±íÊ¾·½·¨
+ * @Date 201510261:55:20 Í¼Ä±Ê¾
  */
 public class BaseGraph {
 
@@ -13,11 +13,11 @@ public class BaseGraph {
 
 	private Boolean[] visited = null;
 
-	// ¸ù¾İ¶¥µãµÄ¸öÊıÀ´¹¹½¨Í¼£¬Ö÷Òª±£´æµÄÊı¾İÊÇ±ß
+	// İ¶Ä¸Í¼ÒªÇ±
 	public BaseGraph(int pointNum) {
 		edgs = new int[pointNum][pointNum];
 		visited = new Boolean[pointNum];
-		// ³õÊ¼»¯
+		// Ê¼
 		for (int i = 0; i < edgs.length; i++) {
 			for (int j = 0; j < edgs.length; j++) {
 				edgs[i][j] = 0;
@@ -54,19 +54,19 @@ public class BaseGraph {
 	}
 
 	/**
-	 * Éî¶ÈµÄÓÅÏÈ±éÀú
+	 * ÈµÈ±
 	 */
 	private String dps() {
-		// ´ÓÁã¿ªÊ¼±éÀú
+		// ã¿ªÊ¼
 		Stack<Integer> theStack = new Stack<Integer>();
 		theStack.push(0);
 		visited[0] = true;
 		String temp = "0";
 
 		while (!theStack.isEmpty()) {
-			//ÕÒµ½Õâ¸ö½ÚµãµÄÁÚ½Úµã£¬Èç¹ûÃ»ÓĞÁÚ½ÚµãµÄ»°£¬ÔòÖ±½ÓµÄµ¯³ö
+			//ÒµÚµÚ½Úµã£¬Ã»Ú½ÚµÄ»Ö±ÓµÄµ
 			int v = getAdjUnvisitedVertex(theStack.peek());
-			// Õâ¸öÁÚ½ÚµãÃ»ÓĞ±»·ÃÎÊ¹ı
+			// Ú½ÚµÃ»Ğ±Ê¹
 			if (v != -1 && !visited[v]) {
 				theStack.push(v);
 				visited[theStack.peek()] = true;
@@ -80,7 +80,7 @@ public class BaseGraph {
 
 	}
 
-	// ÁÚ½ÚµãÊÇ·ñ±»·ÃÎÊ¹ı
+	// Ú½ÚµÇ·ñ±»·Ê¹
 	private int getAdjUnvisitedVertex(Integer peek) {
 		for (int i = 0; i < visited.length; i++) {
 			if (edgs[peek][i] != 0 && !visited[i]) {

@@ -5,9 +5,9 @@ import java.util.Arrays;
 /**
  * @author zhailzh
  * 
- * @Date 2015年11月12日——上午9:40:56
+ * @Date 201511129:40:56
  * 
- *       KMP 给定的一个字符串，找到一个符合的比较短的字符串的p的匹配的位置
+ *       KMP 一址业一系谋冉隙痰址p匹位
  */
 public class KMP {
 
@@ -18,9 +18,9 @@ public class KMP {
 	System.out.println(Arrays.toString(getnext("ABCDABD".toCharArray())));
     }
 
-    // 最大的公共前缀后缀的数组
-    // 为什么会有最大的前缀和后缀的说法，为了匹配的时候，不让i回溯，所以我们必须
-    // 确定i开始比较的位置。
+    // 墓前缀缀
+    // 为什么前缀秃缀说为匹时颍i荩潜
+    // 确i始位谩
     public static int[] getNext(char[] p) {
 	int[] next = new int[p.length];
 	next[0] = -1;
@@ -39,12 +39,12 @@ public class KMP {
 	return next;
     }
 
-    // 使用递归的方法找到next的值，首先next的初始化的next[0]为-1；
-    // 知道next[j] = k ，说明*p0,p1,p2,..pk-1*,pk,....*pn-(k-1),...,pn-1 ,pn-0*
-    // 说明两个*之间的元素是相等的，所以我们求next[j+1]
+    // 使玫莨姆业next值next某始next[0]为-1
+    // 知next[j] = k 说*p0,p1,p2,..pk-1*,pk,....*pn-(k-1),...,pn-1 ,pn-0*
+    // 说*之元鹊模next[j+1]
     // *p0,p1,p2,..pk-1*,pk,pk+1,...pn-(k),*pn-(k-1),...,pn-1 ,pn-0*
-    // 只需要比较pk,和 pn-k即可
-    // 如果不相等，则递归到k-1的情况
+    // 只要冉pk, pn-k
+    // 龋莨榈絢-1
     public static int[] getnext(char[] p) {
 	int pLen = p.length;
 	int next[] = new int[pLen];
@@ -52,7 +52,7 @@ public class KMP {
 	int k = -1;
 	int j = 0;
 	while (j < pLen - 1) {
-	    // p[k]表示前缀，p[j]表示后缀
+	    // p[k]示前缀p[j]示缀
 	    if (k == -1 || p[j] == p[k]) {
 		++k;
 		++j;
@@ -65,7 +65,7 @@ public class KMP {
 	return next;
     }
 
-    // 暴力遍历的方法
+    // 姆
     public static int getTraverseindex2(String target, String pattern) {
 	if (target != null && pattern != null) {
 	    char[] tar = target.toCharArray();
@@ -81,9 +81,9 @@ public class KMP {
 		     * i=i-(j-1); <br/>
 		     * abcdefg<br/>
 		     * abcdh<br/>
-		     * 理解就是根据j走的位置，i向后走，就是回溯，直接写i++，这个是一种不正确的写法
-		     * 因为i在一直的递增，没有一个回溯的过程 例如这种情况下："BBC ABCDAB ABCDABCDABD",
-		     * "ABCDABD" 运行到17的位置，就会直接的增加，而错过匹配的位置
+		     * 歉j叩位茫i撸腔荩直写i++一植确写
+		     * 为i一直牡没一莸墓 拢"BBC ABCDAB ABCDABCDABD",
+		     * "ABCDABD" 械17位茫突直拥樱匹位
 		     */
 		    i = i - (j - 1);
 		    // i++;
@@ -99,16 +99,16 @@ public class KMP {
 
     }
 
-    // 暴力遍历的方法
+    // 姆
     public static int getTraverseindex1(String target, String pattern) {
 	if (target != null && pattern != null) {
 	    char[] tar = target.toCharArray();
 	    char[] pat = pattern.toCharArray();
 
-	    // 首先是找到第一个字符相等的位置
+	    // 业一址鹊位
 	    for (int i = 0; i < tar.length; i++) {
 		char c = tar[i];
-		// 如果这个字符和pattern的首字符相等
+		// 址pattern址
 		if (c == pat[0]) {
 		    int j = 1;
 		    boolean index = true;

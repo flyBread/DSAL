@@ -1,9 +1,9 @@
-package com.algprithm.letcode;
+package com.algprithm.letcodeold;
 
 /**
  * @author zhailzh
  * 
- * @Date 2015Äê12ÔÂ11ÈÕ¡ª¡ªÉÏÎç10:10:17
+ * @Date 2015121110:10:17
  * 
  */
 public class ContainerWithMostWater {
@@ -24,7 +24,7 @@ public class ContainerWithMostWater {
 	}
 
 	/**
-	 * Àí½âÇå³şÌâÒâºÜÖØÒª
+	 * Òª
 	 * */
 	public static int maxArea(int[] height) {
 	    int maxA = 0;
@@ -46,7 +46,7 @@ public class ContainerWithMostWater {
 	    return maxA;
 	}	
 	
-	//µİ¹éµÄËã·¨½â¾öÕâ¸öÎÊÌâ
+	//İ¹ã·¨
 	public static int maxArea2(int[] height) {
 		return maxAreabyDP(height,height.length -1);
 	}
@@ -78,9 +78,9 @@ public class ContainerWithMostWater {
 
 
 	public int maxArea1(int[] height) {
-		// Éı½µĞòµÄ¸¨ÖúÊı×é
+		// Ä¸
 		int[] flags = new int[height.length - 1];
-		// flag´ú±íµÄÊÇÒ»ÖÖÇ÷ÊÆ
+		// flagÒ»
 		for (int i = 1; i < height.length; i++) {
 			int first = height[i - 1];
 			int seconde = height[i];

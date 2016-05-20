@@ -15,7 +15,7 @@ public class TreeNode {
   public TreeNode() {};
 
   /**
-   * Í¨¹ýÊý×é×é½¨¶þ²æÊ÷
+   * Í¨é½¨
    */
   public static TreeNode newTree(int[] arrays) {
     if (arrays == null || arrays.length == 0) {

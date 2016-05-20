@@ -5,7 +5,7 @@ import com.data.tree.LinkedListNode;
 import com.data.tree.TreeNode;
 
 /**
- * 把二叉树转化为双链表
+ * 讯双
  * 
  */
 public class Al01ConvertTree2LinkedList {
@@ -21,7 +21,7 @@ public class Al01ConvertTree2LinkedList {
     System.out.println(link.toAllBeforeString());
   }
 
-  //只有一个索引的前提下，进行转换
+  //只一前拢转
   private static void midOrder(TreeNode root, LinkedNode<Integer> link) {
 	if(root == null) return ;
 	if(root.getLeft() != null){
@@ -37,7 +37,7 @@ public class Al01ConvertTree2LinkedList {
 }
 
 /**
-   * 先序遍历
+   * 
    */
   private static LinkedListNode<Integer> midorder(TreeNode root, LinkedListNode<Integer> list) {
     if (root.getLeft() != null) {

@@ -1,4 +1,4 @@
-package com.algprithm.letcode;
+package com.algprithm.letcodeold;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,9 +7,9 @@ import java.util.List;
 /**
  * @author zhailzh
  * 
- * @Date 2016年1月22日——上午9:29:02
+ * @Date 20161229:29:02
  * 
- * 一个已知的数组，找出所有的四个数字一组的和为某一个值得数组。
+ * 一知椋承的敢荒何骋恢甸。
  */
 public class Lettcode4Sum18 {
 
@@ -19,7 +19,7 @@ public List<List<Integer>> fourSum(int[] nums, int target) {
 		return res;
 	}
 	
-	//开始排序
+	//始
 	Arrays.sort(nums);
 	
 	int fir = 0; 
@@ -35,12 +35,12 @@ public List<List<Integer>> fourSum(int[] nums, int target) {
 			restemp.addAll(Arrays.asList(nums[fir],nums[sec],nums[thi],nums[thu]));
 			res.add(restemp);
 		}else if( temp < target){
-			//相加的值比目标值要小，说明需要增加相加值，也就说需要增加fir 或者 sec
-//			分为几种的情况，
-//			1：sec+1 fir 不变
-//			2 fir+1，sec+1 
+			//拥值目值要小说要值也说要fir  sec
+//			为值
+//			1sec+1 fir 
+//			2 fir+1sec+1 
 //			 
-//			总体就是sec必须加1，fir是否加1 ，需要看情况
+//			sec1fir欠1 要
 			
 			while(fir+1 < nums.length -3 && nums[fir+1] == nums[fir]) fir++;
 			while(sec+1 < nums.length -3 && nums[sec+1] == nums[sec]) sec++;

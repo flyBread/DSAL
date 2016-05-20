@@ -1,4 +1,4 @@
-package com.algprithm.letcode;
+package com.algprithm.letcodeold;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,9 +7,9 @@ import java.util.List;
 /**
  * @author zhailzh
  * 
- * @Date 2016Äê1ÔÂ20ÈÕ¡ª¡ªÉÏÎç9:06:58
+ * @Date 20161209:06:58
  * 
- *       µç»°°´¼üµÄÊä³öµÄ×ÖÄ¸µÄ×éºÏ
+ *       ç»°Ä¸
  */
 public class LetterCombinationsofaPhoneNumber {
 	
@@ -50,7 +50,7 @@ public class LetterCombinationsofaPhoneNumber {
 		if (digits == null || digits.isEmpty()) {
 			return res;
 		}
-		//Ê¹ÓÃÑ­»·µÄ·½·¨
+		//Ê¹Ñ­Ä·
 		for (int i = 0; i < digits.length(); i++) {
 			int value = digits.charAt(i)-'0';
 			if(value >1){
@@ -104,7 +104,7 @@ public class LetterCombinationsofaPhoneNumber {
 		return null;
 	}
 	/**
-	 * ±¿±¿µÄ½â¾ö·½°¸
+	 * Ä½
 	 * 
 	 */
 
@@ -122,7 +122,7 @@ public class LetterCombinationsofaPhoneNumber {
 			}
 		}
 
-		// Êı¾İµÄ½á¹¹£¬ºÜÓĞÌØµãÇ°ÃæµÄ»áÖğ¸öµÄºÍºóÃæµÄÒ»¸öÔªËØ½øĞĞ½áºÏ£¬Ê¹ÓÃµü´úµ÷ÓÃ
+		// İµÄ½á¹¹ØµÇ°Ä»ÄºÍºÒ»ÔªØ½Ğ½Ï£Ê¹Ãµ
 		forEach(res, collections, 0, temp1);
 		return res;
 	}

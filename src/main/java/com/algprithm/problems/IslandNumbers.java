@@ -3,9 +3,9 @@ package com.algprithm.problems;
 /**
  * @author zhailzh
  * 
- * @Date 2015年11月3日——下午7:39:18
+ * @Date 20151137:39:18
  * 
- *       01 岛屿的问题
+ *       01 
  */
 public class IslandNumbers {
 
@@ -15,7 +15,7 @@ public class IslandNumbers {
 
     int islandNum = findIslandNums(islandData);
 
-    System.out.println("含有的岛屿数：" + islandNum);
+    System.out.println("械牡" + islandNum);
   }
 
   private static int findIslandNums(int[][] islandData) {

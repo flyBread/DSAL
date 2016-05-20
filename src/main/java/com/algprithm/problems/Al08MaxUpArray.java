@@ -1,7 +1,7 @@
 package com.algprithm.problems;
 
 /**
- * ÇóÒ»¸öÐòÁÐµÄ×î´ó·Ç½µ×ÓÐòÁÐµÄ³¤¶È£¬²ÉÓÃµÄÊÇ¶¯Ì¬¹æ»®µÄ·½·¨ ËµÃ÷£º×î³¤·Ç½µ×ÓÐòÁÐ²»ÒªÇóÁ¬Ðø
+ * Ò»ÐµÇ½ÐµÄ³È£ÃµÇ¶Ì¬æ»®Ä· Ëµî³¤Ç½Ð²Òª
  */
 public class Al08MaxUpArray {
 
@@ -15,16 +15,16 @@ public class Al08MaxUpArray {
 
   private static int getMaxUpArray(int[] A) {
     int len = 1;
-    // Ê×ÏÈÊÇ×ÓÎÊÌâ½âµÄ±£´æ
+    // Ä±
     int[] d = new int[A.length];
-    // ×´Ì¬×ªÒÆ·½³Ì
-    // a(i) = max(1 , a(j)+1) ÆäÖÐi>j,²¢ÇÒA[i]> A[j] ²»ÒªÇóÁ¬Ðø
-    // Èç¹û·¢Éú×´Ì¬×ªÒÆ£¬ÄÇÃ´×îºóµÄÒ»¸öÔªËØÒ»¶¨ÊÇ×î´óµÄ£¬²»È»¾ÍÒªÎ¬»¤Ô­À´µÄ³¤¶È
+    // ×´Ì¬×ªÆ·
+    // a(i) = max(1 , a(j)+1) i>j,A[i]> A[j] Òª
+    // ×´Ì¬×ªÆ£Ã´Ò»ÔªÒ»Ä£È»ÒªÎ¬Ô­Ä³
     for (int i = 0; i < A.length; i++) {
       d[i] = 1;
-      // ²»ÒªÇóÁ¬ÐøµÄÇé¿öÏÂ£¬ÐèÒªµÄÅÐ¶ÏµÄÌõ¼þ¾ÍÓÐÁËÁ½¸ömax(1 , a(j)+1)£¬A[i]> A[j]
+      // ÒªÂ£ÒªÐ¶Ïµmax(1 , a(j)+1)A[i]> A[j]
       for (int j = 0; j < i; ++j) {
-        // ×´Ì¬·½³ÌµÄ×ªÒÆµÄÈ·¶¨£¬Õâ¸öÊÇÖØÖÐÖ®ÖØ£¡
+        // ×´Ì¬Ìµ×ªÆµÈ·Ö®
         boolean ji = A[j] <= A[i];
         boolean dji = d[j] + 1 > d[i];
         if (ji && dji) {
@@ -36,7 +36,7 @@ public class Al08MaxUpArray {
     }
 
     for (int i = 0; i < d.length; i++) {
-      System.out.println("Êý×éµÄ½ØÖ¹µ½£º" + i + " ×î´ó·Ç½µ×ÓÐòÁÐµÄ³¤¶ÈÎª£º " + d[i]);
+      System.out.println("Ä½Ö¹" + i + " Ç½ÐµÄ³Îª " + d[i]);
     }
 
     return len;

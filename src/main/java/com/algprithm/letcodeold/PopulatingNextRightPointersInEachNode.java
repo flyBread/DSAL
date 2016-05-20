@@ -1,11 +1,11 @@
-package com.algprithm.letcode;
+package com.algprithm.letcodeold;
 
 /**
  * @author zhailzh
  * 
- * @Date 2015年11月13日——上午11:58:10
+ * @Date 2015111311:58:10
  * 
- * Tags：Tree,level0
+ * TagsTree,level0
  */
 
 /**
@@ -33,7 +33,7 @@ public class PopulatingNextRightPointersInEachNode {
 	}
 
 	public static void connect(TreeLinkNode root) {
-		// 初始化
+		// 始
 		TreeLinkNode parent = null;
 		makeNext(root, parent);
 	}

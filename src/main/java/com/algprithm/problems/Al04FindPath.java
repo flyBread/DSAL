@@ -9,7 +9,7 @@ import com.data.tree.TreeNode;
 /**
  * @author zhailzh
  * 
- *         二叉树中，找到路径上面相加为某一个值的所有的路径
+ *         校业路为某一值械路
  */
 public class Al04FindPath {
 
@@ -23,10 +23,10 @@ public class Al04FindPath {
 
   /**
    * @param root2
-   *          传入的二叉树
+   *          亩
    * @param value
-   *          路径上面的和值
-   * @return 路径值
+   *          路暮值
+   * @return 路值
    */
   private static List<String> findPath(TreeNode root2, int value) {
 
@@ -37,7 +37,7 @@ public class Al04FindPath {
   }
 
   /**
-   * 递归的方式
+   * 莨姆式
    */
   private static void judge(TreeNode root, int value, List<String> res, Stack<Integer> stack) {
     int nodev = (Integer) root.getValue();

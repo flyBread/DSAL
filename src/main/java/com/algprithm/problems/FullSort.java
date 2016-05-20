@@ -5,11 +5,11 @@ import java.util.Arrays;
 import java.util.List;
 
 public class FullSort {  
-    //将NUM设置为待排列数组的长度即实现全排列  
+    //NUM为某燃实全  
     private static int NUM = 2;  
   
     /** 
-     * 递归算法：将数据分为两部分，递归将数据从左侧移右侧实现全排列 
+     * 莨惴ㄝ肺］归将荽也实全 
      * 
      * @param datas 
      * @param target 

@@ -1,4 +1,4 @@
-package com.algprithm.letcode;
+package com.algprithm.letcodeold;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -6,7 +6,7 @@ import java.util.HashMap;
 /**
  * @author zhailzh
  * 
- * @Date 2015Äê11ÔÂ13ÈÕ¡ª¡ªÏÂÎç1:15:37
+ * @Date 201511131:15:37
  * Tags:HashMap,level0
  */
 public class TwoSum {
@@ -36,7 +36,7 @@ public class TwoSum {
 	}
 	
 	
-	//Íü¼ÇÔËÓÃÊı¾İ½á¹¹ÁË£¡£¡
+	//İ½á¹¹Ë£
 	public int[] twoSum1(int[] nums, int target) {
 		int index1 = -1, index2 = -1;
 		for (int i = 0; i < nums.length ; i++) {

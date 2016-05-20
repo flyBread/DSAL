@@ -1,4 +1,4 @@
-package com.algprithm.letcode;
+package com.algprithm.letcodeold;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * @author zhailzh
  * 
- * @Date 2015Äê12ÔÂ20ÈÕ¡ª¡ªÏÂÎç4:50:24
+ * @Date 201512204:50:24
  * 
  */
 public class Lettcode3Sum {
@@ -18,8 +18,8 @@ public class Lettcode3Sum {
 	// of zero.
 	//
 	// Note:
-	// Elements in a triplet (a,b,c) must be in non-descending order. (ie, a ¡Ü b
-	// ¡Ü c)
+	// Elements in a triplet (a,b,c) must be in non-descending order. (ie, a  b
+	//  c)
 	// The solution set must not contain duplicate triplets.
 	// For example, given array S = {-1 0 1 2 -1 -4},
 	//
@@ -28,23 +28,23 @@ public class Lettcode3Sum {
 	// (-1, -1, 2)
 	//
 	/***
-	 * Ê×ÏÈ×Ô¼ºÏëµ½µÄÊÇ0·ÖÎªÁ½°ëµÄ×ö·¨£¬È»ºó¾ÍÊÇÅÅĞò£¬ÅÅºÃĞòÒÔºó£¬ÕÒµ½¸ºÊıºÍÕıÊıµÄ¼ä¸ôµÄÎ»ÖÃ£¬È»ºó¸ù¾İÕâ¸öÎ»ÖÃ£¬ÌôÑ¡Á½ ±ßµÄÔªËØ¡£
+	 * Ô¼ëµ½0ÎªÈ»ÅºÔºÒµÄ¼Î»Ã£È»Î»Ã£Ñ¡ ßµÔªØ¡
 	 * 
-	 * Ã÷ÏÔµÄ·¢ÏÖ×Ô¼ºÏëÍáÁË£¬Èç¹ûÎÒÃÇÏÈÅÅĞò£¬Õâ¸öÃ»ÓĞÎÊÌâ£¬µ«ÊÇÅÅºÃÁËĞò£¬ÎÒÃÇ¾ÍÄÜ¹»¶ÔÊ£ÏÂµÄÁ½¸öÔªËØ£¬½øĞĞ×ÜÊıÏŞÖÆµÄ²éÕÒÁË
+	 * ÔµÄ·Ô¼Ë£Ã»â£¬ÅºÇ¾Ü¹Ê£ÂµÔªÆµÄ²
 	 */
 	public List<List<Integer>> threeSum(int[] nums) {
 		List<List<Integer>> res = new ArrayList<List<Integer>>();
-		// °ÑÊı¾İ¿ªÊ¼ÅÅĞò
+		// İ¿Ê¼
 		Arrays.sort(nums);
-		// È»ºóÊ×ÏÈÊÇÑ­»·µÄÈ·¶¨µÚÒ»¸öÖµ£¬µÚ¶ş¸öÖµºÍµÚÈı¸öÖµµÄºÍ¾ÍÓĞÁË
+		// È»Ñ­È·Ò»ÖµÚ¶ÖµÍµÖµÄºÍ¾
 		for (int i = 0; i < nums.length - 2; i++) {
-			//Õâ¸öÌõ¼şÏŞÖÆµÄ·Ç³£µÄÓĞÒâË¼
+			//ÆµÄ·Ç³Ë¼
 			if (i == 0 || (i > 0 && nums[i] != nums[i - 1])) {
 				int from = i + 1;
 				int end = nums.length - 1;
 				int sumt = 0 - nums[i];
 				while (from < end) {
-					// Èç¹ûÏàµÈ
+					// 
 					int temp = nums[from] + nums[end];
 					if (sumt == temp) {
 						res.add(Arrays.asList(nums[i], nums[from], nums[end]));

@@ -1,7 +1,7 @@
 package com.data;
 
 /**
- * Á´±í½Úµã
+ * Úµ
  * 
  */
 public class LinkedNode<E> {

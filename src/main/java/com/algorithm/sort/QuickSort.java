@@ -3,10 +3,10 @@ package com.algorithm.sort;
 import java.util.Arrays;
 
 /**
- * 特性：unstable sort、In-place sort。
- * 最坏运行时间：当输入数组已排序时，时间为O(n^2)，当然可以通过随机化来改进（shuffle array 或者 randomized select
- * pivot）,使得期望运行时间为O(nlgn)。 最佳运行时间：O(nlgn) 快速排序的思想也是分治法。
- * 当输入数组的所有元素都一样时，不管是快速排序还是随机化快速排序的复杂度都为O(n^2)
+ * 裕unstable sortIn-place sort
+ * 罨凳变：时时为O(n^2)然通慕shuffle array  randomized select
+ * pivot,使时为O(nlgn) 时洌篛(nlgn) 思也欠畏
+ * 元囟一时强母佣榷为O(n^2)
  */
 public class QuickSort {
 
@@ -22,7 +22,7 @@ public class QuickSort {
 
   private static void quickSort(int[] arrays, int i, int j) {
     if (i < 0 || j > arrays.length - 1) {
-      throw new IllegalArgumentException("传入的参数，超出了数组的范围");
+      throw new IllegalArgumentException("牟姆围");
     }
 
     if (i < j) {

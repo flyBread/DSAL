@@ -1,13 +1,13 @@
-package com.algprithm.letcode;
+package com.algprithm.letcodeold;
 
 /**
  * @author zhailzh
  * 
- * @Date 2015年12月16日——上午9:03:39
+ * @Date 201512169:03:39
  * 
- * 数字转换为罗马数字
  * 
- * 规则比较的严重：
+ * 
+ * 
  * 
  */
 public class IntegertoRoman {

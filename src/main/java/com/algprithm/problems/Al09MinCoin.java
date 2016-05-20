@@ -2,34 +2,34 @@ package com.algprithm.problems;
 
 public class Al09MinCoin {
 
-  // ¶¯Ì¬¹æ»® ËùµÃ³öµÄÖµÓëÇ°ÃæµÄÏà¹Ø£¬¼´µ±Ç°×ÓÎÊÌâµÄ½âÓÉÉÏÒ»ÎÊÌâÍÆ³ö,ÓÉÉÏÒ»×´Ì¬Ç¨ÒÆµ½µ±Ç°×´Ì¬£¬ÊÜÇ°Ãæ×´Ì¬µÄÓ°Ïì
-  // ÕâÊÇÓë·ÖÖ§·¨µÄ±¾ÖÊÇø±ğ ·ÖÖÎ·¨Ã»ÓĞ×´Ì¬Ç¨ÒÆ ·ÖÖÎ·¨µÄ×ÓÎÊÌâ²»ÊÜÇ°Ãæ½á¹ûµÄÓ°Ïì
+  // Ì¬æ»® Ã³ÖµÇ°Ç°Ä½Ò»Æ³,Ò»×´Ì¬Ç¨ÆµÇ°×´Ì¬Ç°×´Ì¬Ó°
+  // Ö§Ä± Î·Ã»×´Ì¬Ç¨ Î·â²»Ç°Ó°
   /*
-   * µ±Ó²±ÒÎªÁãÊ± d(0)=0 d(1)=d(1-1)+1 d(2)=d(2-1)+1 d(3)=d(3-1)+1
+   * Ó²ÎªÊ± d(0)=0 d(1)=d(1-1)+1 d(2)=d(2-1)+1 d(3)=d(3-1)+1
    * 
-   * d(3)=d(3-3)+1; d(3)=min{d(3-1)+1,d(3-3)+1};//È¡Ó²±Ò¸öÊıµÄ×îĞ¡Öµ ¶¯Ì¬¹æ»®
+   * d(3)=d(3-3)+1; d(3)=min{d(3-1)+1,d(3-3)+1};//È¡Ó²Ò¸Ğ¡Öµ Ì¬æ»®
    */
   public static void main(String[] args) {
     int a[] = { 1, 3, 5 };
 
-    // ×îÉÙĞèÒª¼¸Ã¶Ó²±Ò
+    // ÒªÃ¶Ó²
     int count = 11;
     NumberOfCoin(a, count);
   }
 
   private static void NumberOfCoin(int[] a, int count) {
-    int Min[] = new int[count + 1];// ´¢´æ¸ÃÓ²±ÒËùĞèÓ²±ÒµÄ×îĞ¡ÊıÄ¿
+    int Min[] = new int[count + 1];// Ó²Ó²ÒµĞ¡Ä¿
     Min[0] = 0;//
     int minCoin = 0;//
     for (int i = 1; i < Min.length; i++) {
-      minCoin = i;// iÊÇ²»¿É±äµÄ£¬Ã¿Ò»¸ö¶¼ÊÇºÍÇ°Ò»¸öÏà¹ØµÄ
+      minCoin = i;// iÇ²É±Ä£Ã¿Ò»ÇºÇ°Ò»Øµ
       for (int j = 0; j < a.length; j++) {
         if (a[j] <= i && Min[i - a[j]] + 1 < minCoin) {
           minCoin = Min[i - a[j]] + 1;
         }
       }
       System.out.println(minCoin + "   i=" + i);
-      Min[i] = minCoin;// Ê±¼ä¸´ÔÓ¶ÈÎªO(n^2)
+      Min[i] = minCoin;// Ê±ä¸´Ó¶ÎªO(n^2)
     }
     System.out.println(Min[11]);
   }

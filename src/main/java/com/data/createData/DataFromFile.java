@@ -28,16 +28,16 @@ public class DataFromFile {
   }
 
   /**
-   * 创建操作的数据
+   * 
    * 
    * @param num
-   *          创建数字的个数
+   *          值母
    * @param min
-   *          范围最小值
+   *          围小值
    * @param max
-   *          范围最大值
+   *          围值
    * @param fileName
-   *          文件的名称
+   *          募
    */
   public static File creatIntData(int num, int min, int max, File file) {
 
@@ -66,14 +66,14 @@ public class DataFromFile {
   }
 
   /**
-   * 创建操作的数据
+   * 
    * 
    * @param begine
-   *          开始读取数据的位置
+   *          始取莸位
    * @param length
-   *          读取数据的位置
+   *          取莸位
    * @param fileName
-   *          读取数据所在的文件
+   *          取诘募
    */
   public static int[] readIntDataByBytes(int begine, int length, File fileName) {
     int[] readData = new int[length];
@@ -106,14 +106,14 @@ public class DataFromFile {
   }
 
   /**
-   * 创建操作的数据
+   * 
    * 
    * @param begine
-   *          开始读取数据的位置
+   *          始取莸位
    * @param length
-   *          读取数据的位置
+   *          取莸位
    * @param fileName
-   *          读取数据所在的文件
+   *          取诘募
    */
   public static int[] readIntData(int begine, int length, File fileName) {
     int[] readData = new int[length];
@@ -146,14 +146,14 @@ public class DataFromFile {
   }
 
   /**
-   * 创建操作的数据
+   * 
    * 
    * @param begine
-   *          开始读取数据的位置
+   *          始取莸位
    * @param length
-   *          读取数据的位置
+   *          取莸位
    * @param fileName
-   *          读取数据所在的文件
+   *          取诘募
    */
   public static int[] readIntData(int begine, int length) {
 

@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * @author zhailzh 双向循环链表
+ * @author zhailzh 双循
  */
 public class CycleLinkedList<E> {
 
@@ -28,13 +28,13 @@ public class CycleLinkedList<E> {
     for (Object o : a) {
       @SuppressWarnings("unchecked")
       E e = (E) o;
-      if (first == null) { // 如果是null的cycle linkedlist
+      if (first == null) { // nullcycle linkedlist
         Node<E> newNode = new Node<E>(null, e, null);
         newNode.next = newNode;
         newNode.prev = newNode;
         first = newNode;
       } else {
-        // 添加元素
+        // 元
         Node<E> newNode = new Node<E>(first, e, first.next);
         first.next = newNode;
         newNode.next.prev = newNode;
@@ -52,7 +52,7 @@ public class CycleLinkedList<E> {
       newNode.prev = newNode;
       first = newNode;
     } else {
-      // 添加元素
+      // 元
       Node<E> newNode = new Node<E>(first, e, first.next);
       first.next = newNode;
       newNode.next.prev = newNode;
@@ -106,7 +106,7 @@ public class CycleLinkedList<E> {
     return toArray().toString();
   }
 
-  // 数据元素，数据节点
+  // 元萁诘
   private static class Node<E> {
     E item;
     Node<E> next;

@@ -3,8 +3,8 @@ package com.algorithm.sort;
 import java.util.Arrays;
 
 /**
- * ÌØµã£ºstable sort¡¢In-place sort Ë¼Ïë£ºÍ¨¹ıÁ½Á½½»»»£¬ÏñË®ÖĞµÄÅİÅİÒ»Ñù£¬Ğ¡µÄÏÈÃ°³öÀ´£¬´óµÄºóÃ°³öÀ´¡£ ×î»µÔËĞĞÊ±¼ä£ºO(n^2)
- * ×î¼ÑÔËĞĞÊ±¼ä£ºO(n^2)£¨µ±È»£¬Ò²¿ÉÒÔ½øĞĞ¸Ä½øÊ¹µÃ×î¼ÑÔËĞĞÊ±¼äÎªO(n)
+ * Øµã£ºstable sortIn-place sort Ë¼ë£ºÍ¨Ë®ĞµÒ»Ğ¡Ã°ÄºÃ° î»µÊ±ä£ºO(n^2)
+ * Ê±ä£ºO(n^2)È»Ò²Ô½Ğ¸Ä½Ê¹Ê±ÎªO(n)
  */
 public class BubbleSort {
 
@@ -17,7 +17,7 @@ public class BubbleSort {
   public static int[] bubbleSort(int[] arrays) {
 
     for (int j = 0; j < arrays.length; j++) {
-      // Èç¹û´Óarrays.lenth -1 µ½ j+1 ²»ÔÚÆğÅİ£¬ËµÃ÷Ë³ĞòÒÑ¾­ÅÅºÃÁË£¬¾ÍÃ»ÓĞ±ØÒªÔÙ´ÎµÄÑ­»·ÁË
+      // arrays.lenth -1  j+1 İ£ËµË³Ñ¾ÅºË£Ã»Ğ±ÒªÙ´ÎµÑ­
       for (int i = arrays.length - 1; i > j; i--) {
         if (arrays[i] < arrays[i - 1]) {
           int temp = arrays[i - 1];
@@ -36,7 +36,7 @@ public class BubbleSort {
       if (flag)
         return arrays;
       flag = true;
-      // Èç¹û´Óarrays.lenth -1 µ½ j+1 ²»ÔÚÆğÅİ£¬ËµÃ÷Ë³ĞòÒÑ¾­ÅÅºÃÁË£¬¾ÍÃ»ÓĞ±ØÒªÔÙ´ÎµÄÑ­»·ÁË
+      // arrays.lenth -1  j+1 İ£ËµË³Ñ¾ÅºË£Ã»Ğ±ÒªÙ´ÎµÑ­
       for (int i = arrays.length - 1; i > j; i--) {
         if (arrays[i] < arrays[i - 1]) {
           int temp = arrays[i - 1];

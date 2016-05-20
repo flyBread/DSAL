@@ -1,13 +1,13 @@
-package com.algprithm.letcode;
+package com.algprithm.letcodeold;
 
 import java.util.HashMap;
 
 /**
  * @author zhailzh
  * 
- * @Date 2015Äê11ÔÂ13ÈÕ¡ª¡ªÏÂÎç9:04:21
+ * @Date 201511139:04:21
  * 
- *       ×î³¤µÄÃ»ÓĞÖØ¸´µÄ×Ö·û´® . Given a string, find the length of the longest substring
+ *       î³¤Ã»Ø¸Ö· . Given a string, find the length of the longest substring
  *       without repeating characters. For example, the longest substring
  *       without repeating letters for "abcabcbb" is "abc", which the length is
  *       3. For "bbbbb" the longest substring is "b", with the length of 1.
@@ -40,8 +40,8 @@ public class LongestSubstringWithoutRepeatingCharacters {
 				counter -= occ[ch] - start + 1;
 				start = occ[ch] + 1;
 			}
-			//»¹ÊÇ¶ÔÕâ¸ö¿ªÊ¼µÄ´¦Àí£¬¸Ğ¾õºÜÇÉÃî£¬²¢ÇÒstart ¿ªÊ¼ÊÇ1£¬¸Ğ¾õ±È½ÏµÄºÏºõÂß¼­£¬³£Àí
-			//µ«ÊÇ occ[ch] = i+1,¾Í±È½ÏµÄÆæ¹ÖÁË,Ö»ÄÜ¹»Àí½âÎªÏÂÒ»¸öÔªËØµÄÎ»ÖÃ»òÕß£¬¿ªÊ¼µÄÎ»ÖÃ
+			//Ç¶Ê¼Ä´Ğ¾î£¬start Ê¼1Ğ¾ÄºÏºß¼
+			// occ[ch] = i+1,Í±,Ö»Ü¹ÎªÒ»ÔªØµÎ»Ã»ß£Ê¼Î»
 			occ[ch] = i + 1;
 			++counter;
 
@@ -50,7 +50,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
 		return Math.max(max, counter);
 	}
 
-	// ²ÉÓÃ¶¯Ì¬¹æ»®µÄ·½·¨£¬Õâ¸öĞèÒªºÃºÃµÄÏëÒ»Ïë°¡
+	// Ã¶Ì¬æ»®Ä·ÒªÃºÃµÒ»ë°¡
 	public int lengthOfLongestSubstring3(String s) {
 		char[] content = s.toCharArray();
 		HashMap<Character, Integer> charindex = new HashMap<Character, Integer>();
@@ -70,7 +70,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
 		return max > temp ? max : temp;
 	}
 
-	// ±ÜÃâ»ØËİµÄ±éÀúµÄ·½·¨
+	// İµÄ±Ä·
 	public int lengthOfLongestSubstring2(String s) {
 		if (s != null && !s.isEmpty()) {
 			char[] content = s.toCharArray();
@@ -79,7 +79,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
 			int start = 0;
 			for (int i = 0; i < content.length; i++) {
 				char c = content[i];
-				// ¿ªÊ¼µÄÎ»ÖÃÊÇi£¬½áÊøµÄÎ»ÖÃÊÇÓëÖ®ÏàµÈµÄÄÄÒ»¸öÎ»ÖÃj
+				// Ê¼Î»iÎ»Ö®ÈµÒ»Î»j
 				int j = i;
 				for (; j < content.length; j++) {
 					char cj = content[j];
@@ -90,12 +90,12 @@ public class LongestSubstringWithoutRepeatingCharacters {
 						if (temp > max) {
 							max = temp;
 						}
-						// Èç¹ûÕâ¸öÊ±ºò£¬¿ªÊ¼µÄ×Ö·ûÓĞÏàµÈµÄ,Õâ¸öÊÇÏàµÈ×Ö·ûµÄÎ»ÖÃ
+						// Ê±ò£¬¿Ê¼Ö·Èµ,Ö·Î»
 						int ak = charindex.get(cj);
-						// j Îª½áÊø×Ö·ûµÄÎ»ÖÃ£¬ÎªÁË²»ÈÃ»ØËİ£¬Ö±½Ó°ÑiÖÃÎªj,È»ºó¼ÆËã³ötempµÄÖµ
+						// j ÎªÖ·Î»Ã£ÎªË²Ã»İ£Ö±Ó°iÎªj,È»tempÖµ
 						// a1,a2,...,ai,ai+1,...,ak,ak+1,....aj,aj+1
-						// Õâ¸öÊ±ºò£¬aiµ½ajµÄ¾àÀëÎªtemp£¬
-						// °ÑiÖÃÎªjÖ®ºó£¬temp¼õÉÙµÄ¾àÀëÎª£¬ai µ½ ak-1 Ö®¼äµÄÔªËØ k-i ËùÒÔ£º
+						// Ê±aiajÄ¾Îªtemp
+						// iÎªjÖ®tempÙµÄ¾Îªai  ak-1 Ö®Ôª k-i Ô£
 						temp = temp - (ak - start);
 
 						for (int k = start; k < ak + 1; k++) {
@@ -113,7 +113,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
 		return 0;
 	}
 
-	// ±©Á¦Æ¥ÅäµÄ·½·¨
+	// Æ¥Ä·
 	public int lengthOfLongestSubstring1(String s) {
 		if (s != null && !s.isEmpty()) {
 			char[] content = s.toCharArray();

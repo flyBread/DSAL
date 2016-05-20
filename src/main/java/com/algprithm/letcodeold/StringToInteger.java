@@ -1,9 +1,9 @@
-package com.algprithm.letcode;
+package com.algprithm.letcodeold;
 
 /**
  * @author zhailzh
  * 
- * @Date 2015年12月3日——上午10:15:21
+ * @Date 201512310:15:21
  * 
  */
 public class StringToInteger {

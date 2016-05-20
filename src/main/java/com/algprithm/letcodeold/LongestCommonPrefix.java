@@ -1,9 +1,9 @@
-package com.algprithm.letcode;
+package com.algprithm.letcodeold;
 
 /**
  * @author zhailzh
  * 
- * @Date 2015年12月18日——上午9:43:50
+ * @Date 201512189:43:50
  * 
  *       Write a function to find the longest common prefix string amongst an
  *       array of strings.

@@ -3,7 +3,7 @@ package com.algorithm.sort;
 import java.util.Arrays;
 
 /**
- * ÌØĞÔ£ºIn-place sort£¬unstable sort¡£ Ë¼Ïë£ºÃ¿´ÎÕÒÒ»¸ö×îĞ¡Öµ¡£ ×îºÃÇé¿öÊ±¼ä£ºO(n^2)¡£ ×î»µÇé¿öÊ±¼ä£ºO(n^2)¡£
+ * Ô£In-place sortunstable sort Ë¼ë£ºÃ¿Ò»Ğ¡Öµ Ê±ä£ºO(n^2) î»µÊ±ä£ºO(n^2)
  */
 public class SelectSort {
 

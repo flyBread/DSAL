@@ -1,13 +1,13 @@
-package com.algprithm.letcode;
+package com.algprithm.letcodeold;
 
 /**
  * @author zhailzh
  * 
- * @Date 2015年11月14日——上午11:20:19
+ * @Date 2015111411:20:19
  * 
- *       两个排好序的数组 的中位数
+ *       藕 位
  *       
- *       Tag：Arrays,level2
+ *       TagArrays,level2
  * 
  */
 public class MedianofTwoSortedArrays {
@@ -26,7 +26,7 @@ public class MedianofTwoSortedArrays {
 		
 	}
 
-	// 求两个数据的最小的k值,因为要求是log(m+n) 所以我们仿照二分查找直接忽略两个数组
+	// 莸小k值,为要log(m+n) 欠斩植直雍
 	public double findMedianSortedArrays2(int[] nums1, int[] nums2) {
 		
 		 int m = nums1.length, n = nums2.length;
@@ -53,7 +53,7 @@ public class MedianofTwoSortedArrays {
 	}
 	
 
-	//转换思路，求两个数据的最小的k值
+	//转思路莸小k值
 	public double findMedianSortedArrays(int[] nums1, int[] nums2) {
 	    double now=0;
 	    double pre=0;
@@ -63,7 +63,7 @@ public class MedianofTwoSortedArrays {
 	    int k=0;
 	    while(k<n){
 	        pre = now;
-	        //如果哪一个数据遍历结束了，则直接是另外的数组
+	        //一荼耍直
 	        if(i==nums1.length){
 	            now = nums2[j++];
 	        }
@@ -79,7 +79,7 @@ public class MedianofTwoSortedArrays {
 	}
 	
 	
-	//暴力的破解
+	//平
 	public double findMedianSortedArrays1(int[] nums1, int[] nums2) {
 		int n = nums1.length;
 		int m = nums2.length;
@@ -114,7 +114,7 @@ public class MedianofTwoSortedArrays {
 
 	  private static void quickSort(int[] arrays, int i, int j) {
 	    if (i < 0 || j > arrays.length - 1) {
-	      throw new IllegalArgumentException("传入的参数，超出了数组的范围");
+	      throw new IllegalArgumentException("牟姆围");
 	    }
 
 	    if (i < j) {

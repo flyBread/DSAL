@@ -1,11 +1,11 @@
-package com.algprithm.letcode;
+package com.algprithm.letcodeold;
 
 /**
  * @author zhailzh
  * 
- * @Date 2015年12月3日——下午7:19:03
+ * @Date 20151237:19:03
  * 
- * 回文数字，不适用额外的空间
+ * 郑枚目占
  */
 public class PalindromeNumber {
 

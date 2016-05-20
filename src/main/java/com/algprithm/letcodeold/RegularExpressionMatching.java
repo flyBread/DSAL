@@ -1,9 +1,9 @@
-package com.algprithm.letcode;
+package com.algprithm.letcodeold;
 
 /**
  * @author zhailzh
  * 
- * @Date 2015年12月8日——下午4:11:06
+ * @Date 20151284:11:06
  * 
  */
 public class RegularExpressionMatching {
@@ -19,13 +19,13 @@ public class RegularExpressionMatching {
 	// bool isMatch(const char *s, const char *p)
 	//
 	// Some examples:
-	// isMatch("aa","a") → false
-	// isMatch("aa","aa") → true
-	// isMatch("aaa","aa") → false
-	// isMatch("aa", "a*") → true
-	// isMatch("aa", ".*") → true
-	// isMatch("ab", ".*") → true
-	// isMatch("aab", "c*a*b") → true
+	// isMatch("aa","a")  false
+	// isMatch("aa","aa")  true
+	// isMatch("aaa","aa")  false
+	// isMatch("aa", "a*")  true
+	// isMatch("aa", ".*")  true
+	// isMatch("ab", ".*")  true
+	// isMatch("aab", "c*a*b")  true
 
 	public static boolean isMatch(String s, String p) {
 		if (s == null && p == null)
@@ -41,10 +41,10 @@ public class RegularExpressionMatching {
 	
 
 	public static boolean isMatch(String s, int sstart, String p, int pstart) {
-		//严格的位置比对
+		//细位帽榷
 		if (s.length() == sstart && p.length() == pstart)
 			return true;
-		//pstart的位置如果超出p.length() -1 就直接的爆出错误
+		//pstart位p.length() -1 直拥谋
 		if (p.length() == pstart)
 			return false;
 		if (s.length() == sstart) {
@@ -52,13 +52,13 @@ public class RegularExpressionMatching {
 			if (pstart + 1 >= p.length() || p.charAt(pstart + 1) != '*') {
 				return false;
 			}
-			//如果碰见到* 则需要把比对的位置迁移2
+			//* 要驯榷缘位迁2
 			return isMatch(s, sstart, p, pstart + 2);
 		}
 		
-		//*匹配的是前缀
+		//*匹前缀
 		if (pstart + 1 <= p.length() - 1 && p.charAt(pstart + 1) == '*') {
-			//碰到.* 的情况，需要比对的是两种的情况
+			//.* 要榷缘值
 			if (s.charAt(sstart) == p.charAt(pstart) || p.charAt(pstart) == '.') {
 				return isMatch(s, sstart + 1, p, pstart) || isMatch(s, sstart, p, pstart + 2);
 			}

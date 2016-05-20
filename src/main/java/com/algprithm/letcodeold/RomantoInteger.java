@@ -1,11 +1,11 @@
-package com.algprithm.letcode;
+package com.algprithm.letcodeold;
 
 import java.util.HashMap;
 
 /**
  * @author zhailzh
  * 
- * @Date 2015年12月18日——上午9:20:53
+ * @Date 201512189:20:53
  * 
  */
 public class RomantoInteger {
@@ -18,9 +18,9 @@ public class RomantoInteger {
 	}
 
 	 public int romanToInt(String s) {
-	        //：Ⅰ（1）Ⅴ（5）Ⅹ（10）L（50）C（100）D（500）M（1000） 
-	        // rules:位于大数的后面时就作为加数；位于大数的前面就作为减数
-	        //eg：Ⅲ=3,Ⅳ=4,Ⅵ=6,ⅩⅨ=19,ⅩⅩ=20,ⅩLⅤ=45,MCMⅩⅩC=1980
+	        //1510L50C100D500M1000 
+	        // rules:位诖暮时为位诖前为
+	        //eg=3,=4,=6,=19,=20,L=45,MCMC=1980
 	        //"DXCXI"
 	        if(s == null || s.length() == 0) return 0;
 	        int len = s.length();
