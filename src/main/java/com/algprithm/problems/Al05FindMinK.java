@@ -1,6 +1,6 @@
 package com.algprithm.problems;
 
-import com.algorithm.sort.QuickSort;
+import com.algprithm.sort.QuickSort;
 import com.data.Heap;
 import com.data.createData.DataFromFile;
 

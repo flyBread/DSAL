@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /**
- * @author zhailzh ӿֱ̨ӵѭĶ
+ * @author zhailzh
  */
 public class DataFromConsole {
 
