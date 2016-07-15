@@ -26,24 +26,17 @@ public class MergeSort {
 
   private static int[] arrayMergeSort(int[] arrays, int i, int j) {
     if (i < 0 || j > arrays.length - 1) {
-      throw new IllegalArgumentException("ĲķΧ");
+      throw new IllegalArgumentException("");
     }
     if (i < j) {
-
       int m = (i + j) / 2;
-
       arrayMergeSort(arrays, i, m);
-
       arrayMergeSort(arrays, m + 1, j);
-
       arrayMergeSortContentNoFlag(arrays, i, m, j);
     }
     return arrays;
   }
 
-  /**
-   * i ʼ j  m м ʹñ־λ㷨
-   */
   public static void arrayMergeSortContent(int[] arrays, int i, int m, int j) {
     int first = m - i + 1;
     int second = j - m;
@@ -51,14 +44,13 @@ public class MergeSort {
     int[] firsta = new int[first + 1];
     int[] seconda = new int[second + 1];
 
-    // ʼ
     for (int k = i; k <= m; k++) {
       firsta[k - i] = arrays[k];
     }
     for (int k = m + 1; k <= j; k++) {
       seconda[k - m - 1] = arrays[k];
     }
-    // ־λ
+
     firsta[first] = Integer.MAX_VALUE;
     seconda[second] = Integer.MAX_VALUE;
 
@@ -75,9 +67,6 @@ public class MergeSort {
     }
   }
 
-  /**
-   * i ʼ j  m м ʹñ־λ㷨
-   */
   public static void arrayMergeSortContentNoFlag(int[] arrays, int i, int m, int j) {
     int first = m - i + 1;
     int second = j - m;

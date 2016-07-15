@@ -1,13 +1,6 @@
 package com.algprithm.sort;
 
 import java.util.Arrays;
-
-/**
- * ԣunstable sortIn-place sort
- * ʱ䣺ʱʱΪO(n^2)ȻͨĽshuffle array  randomized select
- * pivot,ʹʱΪO(nlgn) ʱ䣺O(nlgn) ˼ҲǷη
- * ԪضһʱǿĸӶȶΪO(n^2)
- */
 public class QuickSort {
 
   public static void main(String[] args) {

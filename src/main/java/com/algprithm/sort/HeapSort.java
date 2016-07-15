@@ -31,7 +31,6 @@ public class HeapSort {
     return arrays;
   }
 
-  // ֶѵ
   private static void mainHeap(int[] arrays, int i, int length) {
     // 
     int largest = i;
