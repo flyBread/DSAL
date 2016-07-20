@@ -12,11 +12,8 @@ public class ZigZagConversion {
 	public static String convert(String s, int numRows) {
 	    if(numRows<=1) return s;
 	    StringBuilder sb = new StringBuilder();
-	    //ѭ
 	    int guilushu = 2*(numRows -1);
-	    
 	    for (int i = 0; i < numRows; i++) {
-			//sбе
 	    	for (int j = i; j < s.length(); j++) {
 	    		if(j%guilushu  == i || j%guilushu == (guilushu - i)){
 	    			System.out.print(" "+j);
@@ -28,9 +25,7 @@ public class ZigZagConversion {
 	    return sb.toString();
 	}
 	
-	/**
-	 * ͨռлȡٶ
-	 * */
+	
 	public String convertbyKongJian(String s, int nRows) {
         if(nRows <= 1)
             return s;

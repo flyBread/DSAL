@@ -3,7 +3,6 @@ package com.zlz.leetcode.map;
 import java.util.Arrays;
 import java.util.HashMap;
 
-import com.algprithm.letcodeold.TwoSum;
 
 /*Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 
@@ -41,7 +40,26 @@ public class L1TwoSum {
         return null;
     }
 	
-	public int[] twoSum1(int[] nums, int target) {
+	public int[] twoSum_improve(int[] nums, int target) {
+		HashMap<Integer, Integer> temp = new HashMap<Integer, Integer>();
+		for (int i = 0; i < nums.length; i++) {
+			int value = target - nums[i];
+			if(temp.containsKey(value)){
+				int index = temp.get(value);
+				int[] res = new int[2];
+				res[0] = i > index? index:i;
+				res[1] = i > index? i:index;
+				return res;
+			}
+			temp.put(nums[i], i);
+		}
+		temp.clear();
+		temp = null;
+		return null;
+	}
+	
+	
+	public int[] twoSum_sort(int[] nums, int target) {
         int n = nums.length;
         for(int i = 0; i < n; i++) 
              nums[i] = nums[i] * n + (nums[i] < 0 ? -i : i);
