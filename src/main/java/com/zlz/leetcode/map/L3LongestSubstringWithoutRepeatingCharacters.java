@@ -22,8 +22,8 @@ public class L3LongestSubstringWithoutRepeatingCharacters {
 
 		int value4 = chars.lengthOfLongestSubstring3_improve("abcabcbbpo");
 		System.out.println(value4);
-		System.out.println(chars.lengthOfLongestSubstring("abcabcbbpo"));
-		System.out.println(chars.lengthOfLongestSubstring3_normal("abcabcbbpo"));
+		System.out.println(chars.lengthOfLongestSubstring3("abba"));
+		System.out.println(chars.lengthOfLongestSubstring3_normal("abba"));
 
 		
 	}
@@ -68,11 +68,16 @@ public class L3LongestSubstringWithoutRepeatingCharacters {
 	        Map<Character, Integer> map = new HashMap<Character, Integer>(); // current index of character
 	        // try to extend the range [i, j]
 	        for (int j = 0, i = 0; j < n; j++) {
+	        	//首先处理的是异常的情况，如果碰到了重复的，那么首先受影响的是起始的位置
+	        	//map.get(s.charAt(j))，代表的是当前重复字符需要开始的位置
+	        	//i 标识上一次重复字符开始的位置，所以有一个比较的过程
+	        	char temp = s.charAt(j);
 	            if (map.containsKey(s.charAt(j))) {
-	                i = Math.max(map.get(s.charAt(j)), i);
+	            	int position = map.get(temp);
+	                i = Math.max(position, i);
 	            }
 	            ans = Math.max(ans, j - i + 1);
-	            map.put(s.charAt(j), j + 1);
+	            map.put(temp, j + 1);
 	        }
 	        return ans;
 	    }

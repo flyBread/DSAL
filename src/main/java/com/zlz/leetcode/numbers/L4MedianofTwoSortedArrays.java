@@ -1,20 +1,32 @@
-package com.algprithm.letcodeold;
+package com.zlz.leetcode.numbers;
 
 /**
  * @author zhailzh
  * 
  * @Date 2015111411:20:19
- * 
- *       ź λ
- *       
- *       TagArrays,level2
+ * Median of Two Sorted Arrays
  * 
  */
-public class MedianofTwoSortedArrays {
+public class L4MedianofTwoSortedArrays {
 
+	
+	/*There are two sorted arrays nums1 and nums2 of size m and n respectively.
+
+	Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
+
+	Example 1:
+	nums1 = [1, 3]
+	nums2 = [2]
+
+	The median is 2.0
+	Example 2:
+	nums1 = [1, 2]
+	nums2 = [3, 4]
+	The median is (2 + 3)/2 = 2.5
+	*/
 	public static void main(String[] args) {
 
-		MedianofTwoSortedArrays st = new MedianofTwoSortedArrays();
+		L4MedianofTwoSortedArrays st = new L4MedianofTwoSortedArrays();
 		
 		int[] nums1 = new int[]{2,3,4,5,6};
 		int[] nums2 = new int[]{1};
@@ -26,10 +38,12 @@ public class MedianofTwoSortedArrays {
 		
 	}
 
-	// ݵСkֵ,ΪҪlog(m+n) ǷնֱֲӺ
+	/**
+	 * 快速排序的变形的算法
+	 * */
 	public double findMedianSortedArrays2(int[] nums1, int[] nums2) {
 		
-		 int m = nums1.length, n = nums2.length;
+		    int m = nums1.length, n = nums2.length;
 	        int l = (m + n + 1) / 2;
 	        int r = (m + n + 2) / 2;
 	        return (getkth(nums1, 0, nums2, 0, l) + getkth(nums1, 0, nums2, 0, r)) / 2.0;
@@ -42,7 +56,6 @@ public class MedianofTwoSortedArrays {
 	    if (k == 1) return Math.min(A[aStart], B[bStart]);
 
 	    int aMid = Integer.MAX_VALUE, bMid = Integer.MAX_VALUE;
-//	    int aMid = 0, bMid = 0;
 	    if (aStart + k/2 - 1 < A.length) aMid = A[aStart + k/2 - 1]; 
 	    if (bStart + k/2 - 1 < B.length) bMid = B[bStart + k/2 - 1];        
 
@@ -53,7 +66,6 @@ public class MedianofTwoSortedArrays {
 	}
 	
 
-	//ת˼·ݵСkֵ
 	public double findMedianSortedArrays(int[] nums1, int[] nums2) {
 	    double now=0;
 	    double pre=0;
@@ -63,7 +75,6 @@ public class MedianofTwoSortedArrays {
 	    int k=0;
 	    while(k<n){
 	        pre = now;
-	        //һݱˣֱ
 	        if(i==nums1.length){
 	            now = nums2[j++];
 	        }
@@ -79,7 +90,6 @@ public class MedianofTwoSortedArrays {
 	}
 	
 	
-	//ƽ
 	public double findMedianSortedArrays1(int[] nums1, int[] nums2) {
 		int n = nums1.length;
 		int m = nums2.length;
