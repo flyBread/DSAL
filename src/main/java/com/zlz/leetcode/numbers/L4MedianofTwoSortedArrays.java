@@ -46,7 +46,12 @@ public class L4MedianofTwoSortedArrays {
 		    int m = nums1.length, n = nums2.length;
 	        int l = (m + n + 1) / 2;
 	        int r = (m + n + 2) / 2;
-	        return (getkth(nums1, 0, nums2, 0, l) + getkth(nums1, 0, nums2, 0, r)) / 2.0;
+	        
+	        //找到第一个中间值
+	        double left = getkth(nums1, 0, nums2, 0, l);
+	        //找到第二个中间值
+	        double right = getkth(nums1, 0, nums2, 0, r);
+	        return (left + right) / 2.0;
 	}
 	
 	
