@@ -15,6 +15,8 @@ public class L5LongestPalindromicSubstring {
 		System.out.println(lo.longestPalindrome(value));
 	}
 	
+	
+	
 	public String longestPalindrome(String s) {
 		  int n = s.length();
 		  String res = null;
