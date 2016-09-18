@@ -1,5 +1,7 @@
 package com.zlz.leetcode.string;
 
+import com.zlz.leetcode.utils.StringUtils;
+
 /**
  * @author zhailzh
  * 
@@ -13,6 +15,31 @@ public class L5LongestPalindromicSubstring {
 		String value = "aba";
 		L5LongestPalindromicSubstring lo = new L5LongestPalindromicSubstring();
 		System.out.println(lo.longestPalindrome(value));
+	}
+	
+	/**
+	 * 第一种方法：采用最长的子串
+	 * 把要求的字符串s,颠倒一下变为s`,然后求取两个字符串的最长公共子串，LCS
+	 * 这个是把未知的问题转化为已知的问题
+	 * */
+	
+	public String longestPalindrome1(String s) {
+		//构建辅助的s`
+		String ss = changeOver(s);
+		String lcs = StringUtils.longestCommomSubsequence(s, ss);
+		return lcs;
+	} 
+	
+	private   String changeOver(String s) {
+		if (s != null && s.length() > 0) {
+			StringBuilder builder = new StringBuilder();
+			for (int i = s.length() - 1; i >= 0; i--) {
+				builder.append(s.charAt(i));
+			}
+			return builder.toString();
+		} else {
+			return s;
+		}
 	}
 	
 	public String longestPalindrome(String s) {
