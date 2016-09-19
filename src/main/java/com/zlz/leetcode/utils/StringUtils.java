@@ -85,7 +85,22 @@ public class StringUtils {
             }  
             System.out.println("");  
         }  
-        int ff = fir.length-1;
+        
+        
+      StringBuffer sb = getLongestCommonSubsequence(fir, sec, k);
+      return sb.reverse().toString();
+	}
+
+	/**
+	 * 得到的是最长的公共子序列
+	 * 
+	 * @param fir
+	 * @param sec
+	 * @param k
+	 * @return
+	 */
+	private static StringBuffer getLongestCommonSubsequence(char[] fir, char[] sec, int[][] k) {
+		int ff = fir.length-1;
 		int ss = sec.length-1;
         int maxlength = k[ff][ss];
         StringBuffer sb=new StringBuffer();
@@ -105,7 +120,7 @@ public class StringUtils {
 				}
         	}
         }
-      return sb.reverse().toString();
+		return sb;
 	}
 	
 	public static void main(String[] args){
@@ -116,8 +131,15 @@ public class StringUtils {
 	
 	
 	
-	
-	
+	/**
+	 * 得到最长的公共子串
+	 * */
+	public static String longestCommomSubstring(String first, String second) {
+		if(first == null || first.length() <= 0 || second == null || second.length() <= 0){
+			return null;
+		}
+		return second;
+	}
 	
 	
 	
