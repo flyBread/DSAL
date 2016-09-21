@@ -12,9 +12,9 @@ import com.zlz.leetcode.utils.StringUtils;
 public class L5LongestPalindromicSubstring {
 
 	public static void main(String[] args) {
-		String value = "aba";
+		String value = "abacab";
 		L5LongestPalindromicSubstring lo = new L5LongestPalindromicSubstring();
-		System.out.println(lo.longestPalindrome(value));
+		System.out.println(lo.longestPalindrome1(value));
 	}
 	
 	/**
@@ -26,9 +26,35 @@ public class L5LongestPalindromicSubstring {
 	public String longestPalindrome1(String s) {
 		//构建辅助的s`
 		String ss = changeOver(s);
-		String lcs = StringUtils.longestCommomSubsequence(s, ss);
+		String lcs = StringUtils.longestCommomSubstring(s, ss);
 		return lcs;
 	} 
+	
+	/**
+	 * 
+	 * */
+	public String longestPalindrome2(String s) {
+	    int start = 0, end = 0;
+	    for (int i = 0; i < s.length(); i++) {
+	        int len1 = expandAroundCenter(s, i, i);
+	        int len2 = expandAroundCenter(s, i, i + 1);
+	        int len = Math.max(len1, len2);
+	        if (len > end - start) {
+	            start = i - (len - 1) / 2;
+	            end = i + len / 2;
+	        }
+	    }
+	    return s.substring(start, end + 1);
+	}
+
+	private int expandAroundCenter(String s, int left, int right) {
+	    int L = left, R = right;
+	    while (L >= 0 && R < s.length() && s.charAt(L) == s.charAt(R)) {
+	        L--;
+	        R++;
+	    }
+	    return R - L - 1;
+	}
 	
 	private   String changeOver(String s) {
 		if (s != null && s.length() > 0) {

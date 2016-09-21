@@ -1,8 +1,12 @@
 package com.algprithm.sort;
 
 import java.util.Arrays;
-public class QuickSort {
 
+/**
+ * @author zhailz
+ * 快速排序，不稳定的算法，最好的情况O(nlogn),最坏的情况O(n2),平均的情况是O(nlogn)
+ */
+public class QuickSort {
   public static void main(String[] args) {
     int[] arrays = new int[] { 5, 1, 6, 2, 4, 5, 6, 7, 0, 4, 2, 3, 5, 7, 0, 1, 2, 3, 8 };
     quickSort(arrays);

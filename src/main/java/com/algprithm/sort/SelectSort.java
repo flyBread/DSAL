@@ -2,8 +2,10 @@ package com.algprithm.sort;
 
 import java.util.Arrays;
 
+
 /**
- * ԣIn-place sortunstable sort ˼룺ÿһСֵ ʱ䣺O(n^2) ʱ䣺O(n^2)
+ * @author zhailz
+ * 简单选择排序，稳定的算法，最好的情况O(n2),最坏的情况O(n2),平均的情况是O(n2)
  */
 public class SelectSort {
 
@@ -17,18 +19,16 @@ public class SelectSort {
 
     for (int i = 0; i < arrays.length - 1; i++) {
       int min = i;
+      //选择最小的元素
       for (int j = i + 1; j < arrays.length; j++) {
         if (arrays[j] < arrays[min]) {
           min = j;
         }
       }
-
       int temp = arrays[i];
       arrays[i] = arrays[min];
       arrays[min] = temp;
     }
-
     return arrays;
   }
-
 }

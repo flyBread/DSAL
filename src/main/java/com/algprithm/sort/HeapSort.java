@@ -3,8 +3,8 @@ package com.algprithm.sort;
 import java.util.Arrays;
 
 /**
- * ԣunstable sortIn-place sort ʱ䣺O(nlgn) ʱ䣺O(nlgn)
- * ˼룺СѡݽṹѻڹȶС
+ * @author zhailz
+ * 堆排序，不稳定的算法，最好的情况O(nlogn),最坏的情况O(nlogn),平均的情况是O(nlogn)
  */
 public class HeapSort {
 

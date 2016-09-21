@@ -3,8 +3,8 @@ package com.algprithm.sort;
 import java.util.Arrays;
 
 /**
- * ص㣺stable sortIn-place sort ˼룺ͨˮеһСðĺð ʱ䣺O(n^2)
- * ʱ䣺O(n^2)ȻҲԽиĽʹʱΪO(n)
+ * @author zhailz
+ * 冒泡排序，稳定的算法，最好的情况O(n),最坏的情况O(n2),平均的情况是O(n2)
  */
 public class BubbleSort {
 
@@ -15,9 +15,8 @@ public class BubbleSort {
   }
 
   public static int[] bubbleSort(int[] arrays) {
-
     for (int j = 0; j < arrays.length; j++) {
-      // arrays.lenth -1  j+1 ݣ˵˳ѾźˣûбҪٴεѭ
+    	//临进的相比较
       for (int i = arrays.length - 1; i > j; i--) {
         if (arrays[i] < arrays[i - 1]) {
           int temp = arrays[i - 1];
@@ -30,13 +29,12 @@ public class BubbleSort {
   }
 
   public static int[] bubbleSortImpove(int[] arrays) {
-
     boolean flag = false;
     for (int j = 0; j < arrays.length; j++) {
+    	//优化的地方
       if (flag)
         return arrays;
       flag = true;
-      // arrays.lenth -1  j+1 ݣ˵˳ѾźˣûбҪٴεѭ
       for (int i = arrays.length - 1; i > j; i--) {
         if (arrays[i] < arrays[i - 1]) {
           int temp = arrays[i - 1];

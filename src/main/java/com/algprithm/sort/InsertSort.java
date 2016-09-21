@@ -4,17 +4,14 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 /**
- * ص㣺stable sortIn-place sort
- * ŸӶȣźʱ򣬸ӶΪO(n)»O(n^2)ĸӶȡ
- * ӶȣΪʱӶΪO(n^2) ȽʺڡԪص顱
- * 
- * ʵĸӶȺԵĸһ鵹ʱԵĸΪn(n-1)/2˲ӶΪO(n^2)
+ * @author zhailz
+ * 插入排序，稳定的算法，最好的情况O(n),最坏的情况O(n2),平均的情况是O(n2)
  */
 public class InsertSort {
 
   public static void main(String[] args) {
     int[] arrays = new int[] { 5, 1, 6, 2, 4, 5, 6, 7, 0, 4, 2, 3, 5, 7, 8 };
-//    arrays = insertSort(arrays);
+    arrays = insertSort(arrays);
     System.out.println(Arrays.toString(arrays));
 
     Object[] obs = new Object[]{"3","1","4","5","7","8","0","9"};
@@ -22,9 +19,6 @@ public class InsertSort {
     System.out.println(Arrays.toString(obs));
   }
   
-  /**
-   * ųӦ
-   * */
   public static Object[] insertSort(Object[] obs){
 	  return insertSortFE(obs,0,obs.length -1);
   }
@@ -54,7 +48,6 @@ private static int compare(Object fir, Object sed) {
 }
 
 public static int[] insertSort(int[] arrays) {
-
     for (int i = 1; i < arrays.length; i++) {
       int temp = arrays[i];
       int j = i - 1;
@@ -69,11 +62,3 @@ public static int[] insertSort(int[] arrays) {
 
 }
 
-/**
- * ʣ򣨲ʹǷһȲ죿
- * 
- * 𣺲һѾźʱҪO(n)ʱ䣬ҪO(n^2)ʱ䡣
- * 
- * 
- * 
- */

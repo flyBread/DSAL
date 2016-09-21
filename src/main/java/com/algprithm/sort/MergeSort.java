@@ -3,8 +3,8 @@ package com.algprithm.sort;
 import java.util.Arrays;
 
 /**
- * ص㣺stable sortOut-place sort ˼룺÷η˼⡣ ʱ䣺O(nlgn)
- * ʱ䣺O(nlgn)
+ * @author zhailz
+ * 归并排序，稳定的算法，最好的情况O(nlogn),最坏的情况O(nlogn),平均的情况是O(nlogn)
  */
 public class MergeSort {
 
@@ -13,7 +13,6 @@ public class MergeSort {
         5, 7, 0, 1, 2, 3, 8 };
     System.out.println(Arrays.toString(arrays));
     System.out.println(arrays.length);
-
     arrays = mergeSort(arrays);
     System.out.println(Arrays.toString(arrays));
     System.out.println(arrays.length);

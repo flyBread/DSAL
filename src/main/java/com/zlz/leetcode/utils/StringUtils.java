@@ -77,16 +77,6 @@ public class StringUtils {
 				}
 			}
 		}
-		
-		// 输出数组结果进行观察  
-        for (int i = 0; i < f ; i++) {  
-            for (int j = 0; j < s ; j++) {  
-                System.out.print(k[i][j]+",");  
-            }  
-            System.out.println("");  
-        }  
-        
-        
       StringBuffer sb = getLongestCommonSubsequence(fir, sec, k);
       return sb.reverse().toString();
 	}
@@ -126,7 +116,7 @@ public class StringUtils {
 	public static void main(String[] args){
 		 String a = "csdn.ertieiteitoebteoteteutt";  
 	        String b = "csdn.bt";  
-	        System.out.println(longestCommomSubsequence(a, b));
+	        System.out.println(longestCommomSubstring(a, b));
 	}
 	
 	
@@ -138,9 +128,44 @@ public class StringUtils {
 		if(first == null || first.length() <= 0 || second == null || second.length() <= 0){
 			return null;
 		}
-		return second;
+		char[] fir = first.toCharArray();
+		char[] sec = second.toCharArray();
+		int ff = fir.length;
+		int ss = sec.length;
+		int[][]k = new int[ff][ss];
+		int max = 0;int imax = 0,jmax=0;
+		for (int i = 0; i < ff; i++) {
+			for(int j = 0;j<ss;j++){
+				if(fir[i] == sec[j]){
+					if(i == 0||j==0){
+						k[i][j]=1;
+					}else{
+						if(k[i-1][j-1] > 0){
+							k[i][j]=k[i-1][j-1]+1;
+						}else{
+							k[i][j]=1;
+						}
+					}
+				}else{
+					k[i][j]=0;
+				}
+				
+				if(k[i][j] > max){
+					imax=i;
+					jmax =j;
+					max= k[i][j];
+				}
+			}
+		}
+		
+		StringBuilder res  = new StringBuilder();
+        for (int i = imax,j = jmax; i >= 0 && j >= 0 && max>0 ; i--,j--) { 
+        	res.append(fir[i]);
+        	max--;
+        }  
+		return res.reverse().toString();
 	}
-	
+
 	
 	
 }
