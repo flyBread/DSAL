@@ -29,13 +29,14 @@ public class L19RemoveNthNodeFromEndofList {
 		//循环了一次，从头到尾巴
 		ListNode q = head;
 		ListNode p = head;
-		if(length == n && n== 1) return null;
+		if (length == n && n == 1)
+			return null;
 		for (int i = 0; i < length; i++) {
-			if(i == length - 1){
+			if (i == length - 1) {
 				p.next = null;
 				break;
 			}
-			if(i >= length - n && head.next != null){
+			if (i >= length - n && head.next != null) {
 				head.val = head.next.val;
 			}
 			p = head;
@@ -63,7 +64,7 @@ public class L19RemoveNthNodeFromEndofList {
 	public static void main(String[] args) {
 		ListNode node1 = new ListNode(1);
 		ListNode node2 = new ListNode(2);
-//		node1.next = node2;
+		//		node1.next = node2;
 		ListNode node3 = new ListNode(3);
 		node2.next = node3;
 		ListNode node4 = new ListNode(4);
@@ -74,34 +75,33 @@ public class L19RemoveNthNodeFromEndofList {
 		L19RemoveNthNodeFromEndofList list = new L19RemoveNthNodeFromEndofList();
 		list.removeNthFromEnd(node1, 1);
 	}
-	
-	
+
 	//看看规范的答案
-	
+
 	public ListNode removeNthFromEnd_normal(ListNode head, int n) {
 		//为返回数据做准备
-	    ListNode dummy = new ListNode(0);
-	    dummy.next = head;
-	    
-	    //求取链表的长度
-	    int length  = 0;
-	    ListNode first = head;
-	    while (first != null) {
-	        length++;
-	        first = first.next;
-	    }
-	    
-	    //找到初始的位置
-	    length -= n;
-	    first = dummy;
-	    while (length > 0) {
-	        length--;
-	        first = first.next;
-	    }
-	    
-	    //直接跳过元素
-	    first.next = first.next.next;
-	    return dummy.next;
+		ListNode dummy = new ListNode(0);
+		dummy.next = head;
+
+		//求取链表的长度
+		int length = 0;
+		ListNode first = head;
+		while (first != null) {
+			length++;
+			first = first.next;
+		}
+
+		//找到初始的位置
+		length -= n;
+		first = dummy;
+		while (length > 0) {
+			length--;
+			first = first.next;
+		}
+
+		//直接跳过元素
+		first.next = first.next.next;
+		return dummy.next;
 	}
 
 }
