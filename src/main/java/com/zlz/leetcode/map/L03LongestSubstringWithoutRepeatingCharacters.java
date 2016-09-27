@@ -8,10 +8,10 @@ import java.util.Map;
  * 
  * @Date 201511139:04:21
  */
-public class L3LongestSubstringWithoutRepeatingCharacters {
+public class L03LongestSubstringWithoutRepeatingCharacters {
 
 	public static void main(String[] args) {
-		L3LongestSubstringWithoutRepeatingCharacters chars = new L3LongestSubstringWithoutRepeatingCharacters();
+		L03LongestSubstringWithoutRepeatingCharacters chars = new L03LongestSubstringWithoutRepeatingCharacters();
 		int value = chars.lengthOfLongestSubstring3_improve("abcabcbbpoiuytrewq");
 		System.out.println(value);
 		System.out.println(chars.lengthOfLongestSubstring("abcabcbbpoiuytrewq"));

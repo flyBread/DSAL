@@ -7,7 +7,7 @@ package com.zlz.leetcode.numbers;
  * Median of Two Sorted Arrays
  * 
  */
-public class L4MedianofTwoSortedArrays {
+public class L04MedianofTwoSortedArrays {
 
 	
 	/*There are two sorted arrays nums1 and nums2 of size m and n respectively.
@@ -26,7 +26,7 @@ public class L4MedianofTwoSortedArrays {
 	*/
 	public static void main(String[] args) {
 
-		L4MedianofTwoSortedArrays st = new L4MedianofTwoSortedArrays();
+		L04MedianofTwoSortedArrays st = new L04MedianofTwoSortedArrays();
 		
 		int[] nums1 = new int[]{2,3,4,5,6};
 		int[] nums2 = new int[]{1};

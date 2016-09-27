@@ -6,7 +6,7 @@ package com.zlz.leetcode.linknode;
  * 时间：2016年7月15日 ### 下午3:59:26
  */
 
-public class L2AddTwoNumbers {
+public class L02AddTwoNumbers {
 
 	/*You are given two linked lists representing two non-negative numbers. 
 	 * The digits are stored in reverse order and each of their nodes contain a 
@@ -15,7 +15,7 @@ public class L2AddTwoNumbers {
 	Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
 	Output: 7 -> 0 -> 8*/
 	public static void main(String[] args) {
-		L2AddTwoNumbers num = new L2AddTwoNumbers();
+		L02AddTwoNumbers num = new L02AddTwoNumbers();
 		ListNode l1 = new ListNode(9);
 		l1.next = new ListNode(8);
 		l1.next.next = new ListNode(9);
