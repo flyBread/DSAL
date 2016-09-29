@@ -26,11 +26,6 @@ public class L08StringToInteger {
 	 * 3.如果有不能够解析的字符，截止到此
 	 * */
 	public static int myAtoi(String str) {
-		//空字符串的处理
-		if (str == null || str.trim().length() <= 0) {
-			return 0;
-		}
-
 		//正负值的问题
 		Boolean value = null;
 		int ii = 0;
