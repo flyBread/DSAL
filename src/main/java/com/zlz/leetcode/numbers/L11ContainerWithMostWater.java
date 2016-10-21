@@ -15,8 +15,30 @@ public class L11ContainerWithMostWater {
 
 	//	Note: You may not slant the container.
 
+	/**
+	 * 思维的力量
+	 * 
+	 * In this case, we will simply consider the area for 
+	 * every possible pair of the lines and find out the maximum area out of those.
+	 * */
 	public int maxArea(int[] height) {
-		return 0;
+		int maxarea = 0;
+		for (int i = 0; i < height.length; i++)
+			for (int j = i + 1; j < height.length; j++)
+				maxarea = Math.max(maxarea, Math.min(height[i], height[j]) * (j - i));
+		return maxarea;
+	}
+
+	public int maxAreaImporve(int[] height) {
+		int maxarea = 0, l = 0, r = height.length - 1;
+		while (l < r) {
+			maxarea = Math.max(maxarea, Math.min(height[l], height[r]) * (r - l));
+			if (height[l] < height[r])
+				l++;
+			else
+				r--;
+		}
+		return maxarea;
 	}
 
 	/**
