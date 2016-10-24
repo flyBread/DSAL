@@ -1,4 +1,4 @@
-package com.data.tree;
+package com.zlz.utils.tree;
 
 public class TreeNode {
 

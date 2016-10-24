@@ -1,8 +1,8 @@
 package com.algprithm.problems;
 
 import com.data.LinkedNode;
-import com.data.tree.LinkedListNode;
-import com.data.tree.TreeNode;
+import com.zlz.utils.tree.LinkedListNode;
+import com.zlz.utils.tree.TreeNode;
 
 /**
  * Ѷ˫
