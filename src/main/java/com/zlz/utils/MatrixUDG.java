@@ -1,4 +1,4 @@
-package com.zlz.leetcode.utils;
+package com.zlz.utils;
 
 import java.io.IOException;
 import java.util.Scanner;

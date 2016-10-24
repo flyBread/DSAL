@@ -2,7 +2,7 @@ package com.algprithm.sort;
 
 import java.util.Arrays;
 
-import com.zlz.leetcode.utils.ListNode;
+import com.zlz.utils.ListNode;
 
 /**
  * @author zhailz

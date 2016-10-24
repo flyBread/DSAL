@@ -16,7 +16,7 @@ public class L11ContainerWithMostWater {
 	//	Note: You may not slant the container.
 
 	/**
-	 * 思维的力量
+	 * 思维的力量：认清楚题目two lines ，是两个支柱之间包含最多的水量
 	 * 
 	 * In this case, we will simply consider the area for 
 	 * every possible pair of the lines and find out the maximum area out of those.

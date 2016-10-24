@@ -1,6 +1,6 @@
 package com.zlz.leetcode.string;
 
-import com.zlz.leetcode.utils.StringUtils;
+import com.zlz.utils.StringUtils;
 
 /**
  * @author zhailzh

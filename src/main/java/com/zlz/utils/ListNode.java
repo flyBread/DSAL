@@ -1,4 +1,4 @@
-package com.zlz.leetcode.utils;
+package com.zlz.utils;
 
 public class ListNode {
 	public int val;
