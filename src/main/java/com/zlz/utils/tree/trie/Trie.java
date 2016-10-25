@@ -8,6 +8,9 @@ import java.util.HashSet;
 
 import com.zlz.utils.StringUtils;
 
+/**
+ * 字典树
+ */
 public class Trie {
 
   private TrieNode root = new TrieNode();
