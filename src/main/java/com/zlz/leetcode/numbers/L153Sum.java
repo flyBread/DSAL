@@ -29,7 +29,7 @@ public class L153Sum {
   /**
    * 第一个念头肯定是遍历，然后感觉比较的low
    */
-  public List<List<Integer>> threeSum(int[] nums) {
+  public static List<List<Integer>> threeSum(int[] nums) {
     List<List<Integer>> res = new ArrayList<List<Integer>>();
     if (nums == null || nums.length < 3) {
       return res;
@@ -43,18 +43,26 @@ public class L153Sum {
       while (begine < i && end > i) {
         if (nums[i] + nums[begine] + nums[end] == 0) {
           res.add(Arrays.asList(nums[begine], nums[i], nums[end]));
+          begine++;
+          end--;
+        } else if (nums[i] + nums[begine] + nums[end] < 0) {
+          begine++;
+        } else {
+          end--;
         }
       }
     }
 
-    return null;
+    return res;
   }
 
   /**
    * @param args
    */
   public static void main(String[] args) {
-    // TODO Auto-generated method stub
+
+    int[] nums = new int[] { -1, 0, 1, 2, -1, -4 };
+    System.out.println(threeSum(nums));
 
   }
 
