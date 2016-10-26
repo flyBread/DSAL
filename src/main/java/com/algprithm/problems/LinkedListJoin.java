@@ -1,6 +1,6 @@
 package com.algprithm.problems;
 
-import com.data.LinkedNode;
+import com.zlz.datastruct.LinkedNode;
 
 /**
  * @author zhailzh

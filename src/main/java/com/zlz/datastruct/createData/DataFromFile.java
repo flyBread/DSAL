@@ -1,4 +1,4 @@
-package com.data.createData;
+package com.zlz.datastruct.createData;
 
 import java.io.BufferedReader;
 import java.io.File;

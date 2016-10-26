@@ -1,4 +1,4 @@
-package com.algprithm.sort;
+package com.zlz.utils.sort;
 
 import com.zlz.utils.PrintUtil;
 

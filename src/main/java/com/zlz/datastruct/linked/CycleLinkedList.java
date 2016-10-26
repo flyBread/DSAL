@@ -1,12 +1,9 @@
-package com.data.linked;
+package com.zlz.datastruct.linked;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-/**
- * @author zhailzh ˫ѭ
- */
 public class CycleLinkedList<E> {
 
   transient int size = 0;
@@ -22,19 +19,17 @@ public class CycleLinkedList<E> {
   private boolean addAll(Collection<? extends E> c) {
     Object[] a = c.toArray();
     int numNew = a.length;
-    if (numNew == 0)
-      return true;
+    if (numNew == 0) return true;
 
     for (Object o : a) {
       @SuppressWarnings("unchecked")
       E e = (E) o;
-      if (first == null) { // nullcycle linkedlist
+      if (first == null) {
         Node<E> newNode = new Node<E>(null, e, null);
         newNode.next = newNode;
         newNode.prev = newNode;
         first = newNode;
       } else {
-        // Ԫ
         Node<E> newNode = new Node<E>(first, e, first.next);
         first.next = newNode;
         newNode.next.prev = newNode;
@@ -52,7 +47,6 @@ public class CycleLinkedList<E> {
       newNode.prev = newNode;
       first = newNode;
     } else {
-      // Ԫ
       Node<E> newNode = new Node<E>(first, e, first.next);
       first.next = newNode;
       newNode.next.prev = newNode;
@@ -106,7 +100,6 @@ public class CycleLinkedList<E> {
     return toArray().toString();
   }
 
-  // Ԫݽڵ
   private static class Node<E> {
     E item;
     Node<E> next;

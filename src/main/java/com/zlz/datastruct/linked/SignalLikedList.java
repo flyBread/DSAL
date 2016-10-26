@@ -1,13 +1,13 @@
-package com.data.linked;
+package com.zlz.datastruct.linked;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import com.data.LinkedNode;
+import com.zlz.datastruct.LinkedNode;
 
 /**
- * @author zhailzh 
+ * @author zhailzh
  */
 public class SignalLikedList<E> {
 
@@ -25,8 +25,7 @@ public class SignalLikedList<E> {
   private boolean addAll(Collection<? extends E> c) {
     Object[] a = c.toArray();
     int numNew = a.length;
-    if (numNew == 0)
-      return true;
+    if (numNew == 0) return true;
 
     for (Object o : a) {
       @SuppressWarnings("unchecked")
@@ -36,7 +35,6 @@ public class SignalLikedList<E> {
         first = newLinkedNode;
         last = first;
       } else {
-        // Ԫ,ͷ巨
         LinkedNode<E> newLinkedNode = new LinkedNode<E>(null, e, first);
         first = newLinkedNode;
       }
@@ -45,17 +43,13 @@ public class SignalLikedList<E> {
     return true;
   }
 
-  /**
-   * index λ֮ mԪصԪ
-   */
   private boolean addAll(int index, Collection<? extends E> c) {
     checkPositionIndex(index);
     Object[] a = c.toArray();
     int numNew = a.length;
-    if (numNew == 0)
-      return false;
+    if (numNew == 0) return false;
     LinkedNode<E> pred, succ;
-    // ȷindex  index ǰһλ
+    // ȷindex index ǰһλ
     if (index == size) {
       succ = null;
       pred = last;
@@ -101,8 +95,7 @@ public class SignalLikedList<E> {
   }
 
   private void checkPositionIndex(int index) {
-    if (!isPositionIndex(index))
-      throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
+    if (!isPositionIndex(index)) throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
   }
 
   private boolean isPositionIndex(int index) {

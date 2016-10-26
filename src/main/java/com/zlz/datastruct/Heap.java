@@ -1,10 +1,7 @@
-package com.data;
+package com.zlz.datastruct;
 
 import java.util.Arrays;
 
-/**
- * @author zhailzh 󶥶ѵĲ
- */
 public class Heap {
 
   public static void printMAXHeapByOrder(int[] heap) {
@@ -30,15 +27,11 @@ public class Heap {
     return arrays;
   }
 
-  // ֶѵ
   private static void mainMINHeap(int[] arrays, int i, int length) {
-    // 
     int minest = i;
     if (left(i) < length && arrays[left(i)] < arrays[minest]) {
       minest = left(i);
     }
-
-    // 
     if (right(i) < length && arrays[right(i)] < arrays[minest]) {
       minest = right(i);
     }
@@ -64,9 +57,8 @@ public class Heap {
     return arrays;
   }
 
-  // ֶѵ
   private static void mainMAXHeap(int[] arrays, int i, int length) {
-    // 
+    //
     int largest = i;
     if (left(i) < length && arrays[left(i)] > arrays[largest]) {
       largest = left(i);

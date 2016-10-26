@@ -1,8 +1,8 @@
 package com.algprithm.problems;
 
-import com.algprithm.sort.QuickSort;
-import com.data.Heap;
-import com.data.createData.DataFromFile;
+import com.zlz.datastruct.Heap;
+import com.zlz.datastruct.createData.DataFromFile;
+import com.zlz.utils.sort.QuickSort;
 
 /**
  * @author zhailzh СKԪ
@@ -77,7 +77,7 @@ public class Al05FindMinK {
   }
 
   /**
-   * value  minkеԪбȽϣȷvalueminkеλ
+   * value minkеԪбȽϣȷvalueminkеλ
    */
   public static void sortk(int value, int[] mink) {
 
