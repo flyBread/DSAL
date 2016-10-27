@@ -20,7 +20,6 @@ public class SmallFactorials {
     int testCaseValues[] = new int[numberOfLines];
 
     for (int i = 0; i < numberOfLines; i++) {
-
       String input = br.readLine();
       int testCaseValue = Integer.parseInt(input);
       testCaseValues[i] = testCaseValue;
